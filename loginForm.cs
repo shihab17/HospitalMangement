@@ -18,6 +18,8 @@ namespace HospitalMangement
         public loginForm()
         {
             InitializeComponent();
+            //btnExit.Visible = false;
+            //txtPassword.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace HospitalMangement
             LogIn();
 
         }
+
         private void LogIn()
         {
             DataAccess dataaccess = new DataAccess();
@@ -57,13 +60,19 @@ namespace HospitalMangement
                 var userType = dt.Rows[0].Field<int>("UserType");
                 if (userType == (int)Entities.Users.UserTypeEnum.Admin)
                 {
+                    int  id = Convert.ToInt32( dt.Rows[0][0].ToString());
+
                     AdminHome admin = new AdminHome();
                     admin.Show();
                     this.Hide();
                 }
-                if (userType == (int)Entities.Users.UserTypeEnum.Doctorr)
+                if (userType == (int)Entities.Users.UserTypeEnum.Doctor)
                 {
-                    DoctorHome doctor = new DoctorHome();
+                    int id = Convert.ToInt32(dt.Rows[0][0].ToString());
+                    int ut= (int)Entities.Users.UserTypeEnum.Doctor;
+                    Users usr= new Users(id, txtUserName.Text, txtPassword.Text, ut);
+
+                    DoctorHome doctor = new DoctorHome(this,usr);
                     doctor.Show();
                     this.Hide();
                 }
@@ -81,6 +90,49 @@ namespace HospitalMangement
             {
                 LogIn();
             }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            var text = (sender as TextBox).Text;
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                e.Cancel = true;
+                txtUserName.Focus();
+                errorProvider1.SetError(txtUserName, $"Should not be white");
+            }
+            else {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUserName, "");
+
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            var text = (sender as TextBox).Text;
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                e.Cancel = true;
+                txtPassword.Focus();
+                errorProvider1.SetError(txtPassword, $"Should not be white");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUserName, "");
+
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

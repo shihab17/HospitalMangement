@@ -16,5 +16,14 @@ namespace HospitalMangement
         {
             InitializeComponent();
         }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            
+
+            DoctorHome doctor = new DoctorHome();
+            doctor.Show();
+            this.Hide();
+        }
     }
 }

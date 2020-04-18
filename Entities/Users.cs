@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HospitalMangement.Entities
 {
-    class Users
+     public  class Users
     {
         public enum UserTypeEnum
         {
             Admin,
-            Doctorr,
+            Doctor,
             Employee
         };
         public int Id { get;set;}
@@ -19,6 +19,14 @@ namespace HospitalMangement.Entities
         public string Password { get; set; }
        
         public int UserType { get; set; }
+        public Users() { }
 
+        public Users(int id, string userName, string password, int userType)
+        {
+            Id = id;
+            UserName = userName;
+            Password = password;
+            UserType = userType;
+        }
     }
 }
