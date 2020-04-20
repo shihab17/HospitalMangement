@@ -149,5 +149,40 @@ namespace HospitalMangement
         {
 
         }
+
+        private void btnDoctorGanarelInfoSave_Click(object sender, EventArgs e)
+        {
+            DataAccess dataaccess = new DataAccess();
+            DateTime dt = dtpDOB.Value;
+            var cbval = cbDoctorBloodGroup.SelectedItem;
+            var cbIndex = cbDoctorBloodGroup.SelectedIndex;
+            string checkedRB; 
+            if(rbMale.Checked)
+            {
+                checkedRB = "Male";
+            }
+            else
+            {
+                checkedRB = "Female";
+            }
+           
+          //  string sql1 = string.Format("insert into tblDoctorGenarelInfo (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
+           //      "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text,txtDoctorFirstName.Text,txtDoctorLastName.Text,txtDoctorFatherName.Text,txtDoctorMotherName.Text,txtDoctorAddress.Text,txtDoctorEmail.Text,cbIndex,checkedRB,dt, System.DateTime.Now.ToString());
+
+
+            string sql1 = string.Format("insert into tblDoctorGenarelInfo (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text, txtDoctorFirstName.Text,txtDoctorLastName.Text,txtDoctorFatherName.Text,txtDoctorMotherName.Text,txtDoctorAddress.Text,txtDoctorEmail.Text,cbval,checkedRB,dt,txtDoctorPhoneNumber.Text, System.DateTime.Now.ToString());
+
+            SqlCommand commandd = dataaccess.GetCommand(sql1);
+            commandd.Connection.Open();
+            int rowsAffected = commandd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Insert Successfully!!" );
+
+            }
+            else { MessageBox.Show("Something went wrong"); }
+            commandd.Connection.Close();
+        }
     }
 }

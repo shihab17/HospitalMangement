@@ -38,30 +38,30 @@
             this.panelAddDoctor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDoctorGenarelInfo = new System.Windows.Forms.Panel();
+            this.cbDoctorBloodGroup = new System.Windows.Forms.ComboBox();
+            this.lblDoctorBloodGroup = new System.Windows.Forms.Label();
+            this.txtDoctorPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblDoctorPhoneNumber = new System.Windows.Forms.Label();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.lblDoctorBirthday = new System.Windows.Forms.Label();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.lblDoctorGender = new System.Windows.Forms.Label();
+            this.lblDoctorEmailAddress = new System.Windows.Forms.Label();
+            this.txtDoctorAddress = new System.Windows.Forms.TextBox();
+            this.txtDoctorEmail = new System.Windows.Forms.TextBox();
+            this.lblDoctorAddress = new System.Windows.Forms.Label();
             this.lblDoctorMotherName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDoctorFatherName = new System.Windows.Forms.TextBox();
+            this.txtDoctorMotherName = new System.Windows.Forms.TextBox();
             this.lblDoctorFatherName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDoctorFirstName = new System.Windows.Forms.Label();
-            this.txtDoctorName = new System.Windows.Forms.TextBox();
+            this.txtDoctorFirstName = new System.Windows.Forms.TextBox();
             this.btnDoctorGanarelInfoSave = new System.Windows.Forms.Button();
-            this.txtDoctorFName = new System.Windows.Forms.TextBox();
+            this.txtDoctorLastName = new System.Windows.Forms.TextBox();
             this.lblDoctorLastName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblDoctorEmailAddress = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lblDoctorAddress = new System.Windows.Forms.Label();
-            this.lblDoctorGender = new System.Windows.Forms.Label();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.lblDoctorBirthday = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblDoctorPhoneNumber = new System.Windows.Forms.Label();
-            this.txtDoctorPhoneNumber = new System.Windows.Forms.TextBox();
-            this.lblDoctorBloodGroup = new System.Windows.Forms.Label();
-            this.comboBoxDoctorBloodGroup = new System.Windows.Forms.ComboBox();
             this.panelAddDoctor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDoctorGenarelInfo.SuspendLayout();
@@ -154,34 +154,156 @@
             // panelDoctorGenarelInfo
             // 
             this.panelDoctorGenarelInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelDoctorGenarelInfo.Controls.Add(this.comboBoxDoctorBloodGroup);
+            this.panelDoctorGenarelInfo.Controls.Add(this.cbDoctorBloodGroup);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorBloodGroup);
             this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorPhoneNumber);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorPhoneNumber);
-            this.panelDoctorGenarelInfo.Controls.Add(this.dateTimePicker1);
+            this.panelDoctorGenarelInfo.Controls.Add(this.dtpDOB);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorBirthday);
-            this.panelDoctorGenarelInfo.Controls.Add(this.radioButtonFemale);
-            this.panelDoctorGenarelInfo.Controls.Add(this.radioButtonMale);
+            this.panelDoctorGenarelInfo.Controls.Add(this.rbFemale);
+            this.panelDoctorGenarelInfo.Controls.Add(this.rbMale);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorGender);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorEmailAddress);
-            this.panelDoctorGenarelInfo.Controls.Add(this.textBox3);
-            this.panelDoctorGenarelInfo.Controls.Add(this.textBox4);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorAddress);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorEmail);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorAddress);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorMotherName);
-            this.panelDoctorGenarelInfo.Controls.Add(this.textBox1);
-            this.panelDoctorGenarelInfo.Controls.Add(this.textBox2);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorFatherName);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorMotherName);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorFatherName);
             this.panelDoctorGenarelInfo.Controls.Add(this.label5);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorFirstName);
-            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorName);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorFirstName);
             this.panelDoctorGenarelInfo.Controls.Add(this.btnDoctorGanarelInfoSave);
             this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorId);
-            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorFName);
+            this.panelDoctorGenarelInfo.Controls.Add(this.txtDoctorLastName);
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorLastName);
             this.panelDoctorGenarelInfo.Location = new System.Drawing.Point(3, 71);
             this.panelDoctorGenarelInfo.Name = "panelDoctorGenarelInfo";
             this.panelDoctorGenarelInfo.Size = new System.Drawing.Size(357, 415);
             this.panelDoctorGenarelInfo.TabIndex = 9;
+            // 
+            // cbDoctorBloodGroup
+            // 
+            this.cbDoctorBloodGroup.FormattingEnabled = true;
+            this.cbDoctorBloodGroup.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "AB+",
+            "AB-",
+            "O+",
+            "O-"});
+            this.cbDoctorBloodGroup.Location = new System.Drawing.Point(91, 240);
+            this.cbDoctorBloodGroup.Name = "cbDoctorBloodGroup";
+            this.cbDoctorBloodGroup.Size = new System.Drawing.Size(200, 21);
+            this.cbDoctorBloodGroup.TabIndex = 23;
+            // 
+            // lblDoctorBloodGroup
+            // 
+            this.lblDoctorBloodGroup.AutoSize = true;
+            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 243);
+            this.lblDoctorBloodGroup.Name = "lblDoctorBloodGroup";
+            this.lblDoctorBloodGroup.Size = new System.Drawing.Size(66, 13);
+            this.lblDoctorBloodGroup.TabIndex = 22;
+            this.lblDoctorBloodGroup.Text = "Blood Group";
+            // 
+            // txtDoctorPhoneNumber
+            // 
+            this.txtDoctorPhoneNumber.Location = new System.Drawing.Point(91, 330);
+            this.txtDoctorPhoneNumber.Name = "txtDoctorPhoneNumber";
+            this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorPhoneNumber.TabIndex = 21;
+            // 
+            // lblDoctorPhoneNumber
+            // 
+            this.lblDoctorPhoneNumber.AutoSize = true;
+            this.lblDoctorPhoneNumber.Location = new System.Drawing.Point(7, 333);
+            this.lblDoctorPhoneNumber.Name = "lblDoctorPhoneNumber";
+            this.lblDoctorPhoneNumber.Size = new System.Drawing.Size(78, 13);
+            this.lblDoctorPhoneNumber.TabIndex = 20;
+            this.lblDoctorPhoneNumber.Text = "Phone Number";
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Location = new System.Drawing.Point(91, 295);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(200, 20);
+            this.dtpDOB.TabIndex = 19;
+            // 
+            // lblDoctorBirthday
+            // 
+            this.lblDoctorBirthday.AutoSize = true;
+            this.lblDoctorBirthday.Location = new System.Drawing.Point(7, 301);
+            this.lblDoctorBirthday.Name = "lblDoctorBirthday";
+            this.lblDoctorBirthday.Size = new System.Drawing.Size(45, 13);
+            this.lblDoctorBirthday.TabIndex = 18;
+            this.lblDoctorBirthday.Text = "Birthday";
+            // 
+            // rbFemale
+            // 
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(169, 264);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(59, 17);
+            this.rbFemale.TabIndex = 17;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
+            // 
+            // rbMale
+            // 
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(91, 264);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(48, 17);
+            this.rbMale.TabIndex = 16;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            // 
+            // lblDoctorGender
+            // 
+            this.lblDoctorGender.AutoSize = true;
+            this.lblDoctorGender.Location = new System.Drawing.Point(7, 268);
+            this.lblDoctorGender.Name = "lblDoctorGender";
+            this.lblDoctorGender.Size = new System.Drawing.Size(42, 13);
+            this.lblDoctorGender.TabIndex = 15;
+            this.lblDoctorGender.Text = "Gender";
+            // 
+            // lblDoctorEmailAddress
+            // 
+            this.lblDoctorEmailAddress.AutoSize = true;
+            this.lblDoctorEmailAddress.Location = new System.Drawing.Point(7, 212);
+            this.lblDoctorEmailAddress.Name = "lblDoctorEmailAddress";
+            this.lblDoctorEmailAddress.Size = new System.Drawing.Size(32, 13);
+            this.lblDoctorEmailAddress.TabIndex = 13;
+            this.lblDoctorEmailAddress.Text = "Email";
+            // 
+            // txtDoctorAddress
+            // 
+            this.txtDoctorAddress.Location = new System.Drawing.Point(91, 174);
+            this.txtDoctorAddress.Multiline = true;
+            this.txtDoctorAddress.Name = "txtDoctorAddress";
+            this.txtDoctorAddress.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorAddress.TabIndex = 11;
+            // 
+            // txtDoctorEmail
+            // 
+            this.txtDoctorEmail.Location = new System.Drawing.Point(91, 205);
+            this.txtDoctorEmail.Name = "txtDoctorEmail";
+            this.txtDoctorEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorEmail.TabIndex = 12;
+            // 
+            // lblDoctorAddress
+            // 
+            this.lblDoctorAddress.AutoSize = true;
+            this.lblDoctorAddress.Location = new System.Drawing.Point(7, 177);
+            this.lblDoctorAddress.Name = "lblDoctorAddress";
+            this.lblDoctorAddress.Size = new System.Drawing.Size(45, 13);
+            this.lblDoctorAddress.TabIndex = 14;
+            this.lblDoctorAddress.Text = "Address";
             // 
             // lblDoctorMotherName
             // 
@@ -192,19 +314,19 @@
             this.lblDoctorMotherName.TabIndex = 9;
             this.lblDoctorMotherName.Text = "Mother Name";
             // 
-            // textBox1
+            // txtDoctorFatherName
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtDoctorFatherName.Location = new System.Drawing.Point(91, 111);
+            this.txtDoctorFatherName.Name = "txtDoctorFatherName";
+            this.txtDoctorFatherName.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorFatherName.TabIndex = 7;
             // 
-            // textBox2
+            // txtDoctorMotherName
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtDoctorMotherName.Location = new System.Drawing.Point(91, 142);
+            this.txtDoctorMotherName.Name = "txtDoctorMotherName";
+            this.txtDoctorMotherName.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorMotherName.TabIndex = 8;
             // 
             // lblDoctorFatherName
             // 
@@ -234,12 +356,12 @@
             this.lblDoctorFirstName.TabIndex = 2;
             this.lblDoctorFirstName.Text = "First Name";
             // 
-            // txtDoctorName
+            // txtDoctorFirstName
             // 
-            this.txtDoctorName.Location = new System.Drawing.Point(91, 48);
-            this.txtDoctorName.Name = "txtDoctorName";
-            this.txtDoctorName.Size = new System.Drawing.Size(200, 20);
-            this.txtDoctorName.TabIndex = 0;
+            this.txtDoctorFirstName.Location = new System.Drawing.Point(91, 48);
+            this.txtDoctorFirstName.Name = "txtDoctorFirstName";
+            this.txtDoctorFirstName.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorFirstName.TabIndex = 0;
             // 
             // btnDoctorGanarelInfoSave
             // 
@@ -249,13 +371,14 @@
             this.btnDoctorGanarelInfoSave.TabIndex = 4;
             this.btnDoctorGanarelInfoSave.Text = "Save";
             this.btnDoctorGanarelInfoSave.UseVisualStyleBackColor = true;
+            this.btnDoctorGanarelInfoSave.Click += new System.EventHandler(this.btnDoctorGanarelInfoSave_Click);
             // 
-            // txtDoctorFName
+            // txtDoctorLastName
             // 
-            this.txtDoctorFName.Location = new System.Drawing.Point(91, 80);
-            this.txtDoctorFName.Name = "txtDoctorFName";
-            this.txtDoctorFName.Size = new System.Drawing.Size(200, 20);
-            this.txtDoctorFName.TabIndex = 1;
+            this.txtDoctorLastName.Location = new System.Drawing.Point(91, 80);
+            this.txtDoctorLastName.Name = "txtDoctorLastName";
+            this.txtDoctorLastName.Size = new System.Drawing.Size(200, 20);
+            this.txtDoctorLastName.TabIndex = 1;
             // 
             // lblDoctorLastName
             // 
@@ -275,128 +398,6 @@
             this.label2.Size = new System.Drawing.Size(237, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Welcome To Doctor Home Page";
-            // 
-            // lblDoctorEmailAddress
-            // 
-            this.lblDoctorEmailAddress.AutoSize = true;
-            this.lblDoctorEmailAddress.Location = new System.Drawing.Point(7, 212);
-            this.lblDoctorEmailAddress.Name = "lblDoctorEmailAddress";
-            this.lblDoctorEmailAddress.Size = new System.Drawing.Size(32, 13);
-            this.lblDoctorEmailAddress.TabIndex = 13;
-            this.lblDoctorEmailAddress.Text = "Email";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(91, 174);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(91, 205);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // lblDoctorAddress
-            // 
-            this.lblDoctorAddress.AutoSize = true;
-            this.lblDoctorAddress.Location = new System.Drawing.Point(7, 177);
-            this.lblDoctorAddress.Name = "lblDoctorAddress";
-            this.lblDoctorAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblDoctorAddress.TabIndex = 14;
-            this.lblDoctorAddress.Text = "Address";
-            // 
-            // lblDoctorGender
-            // 
-            this.lblDoctorGender.AutoSize = true;
-            this.lblDoctorGender.Location = new System.Drawing.Point(7, 268);
-            this.lblDoctorGender.Name = "lblDoctorGender";
-            this.lblDoctorGender.Size = new System.Drawing.Size(42, 13);
-            this.lblDoctorGender.TabIndex = 15;
-            this.lblDoctorGender.Text = "Gender";
-            // 
-            // radioButtonMale
-            // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Location = new System.Drawing.Point(91, 264);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(48, 17);
-            this.radioButtonMale.TabIndex = 16;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Male";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonFemale
-            // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Location = new System.Drawing.Point(169, 264);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(59, 17);
-            this.radioButtonFemale.TabIndex = 17;
-            this.radioButtonFemale.TabStop = true;
-            this.radioButtonFemale.Text = "Female";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
-            // 
-            // lblDoctorBirthday
-            // 
-            this.lblDoctorBirthday.AutoSize = true;
-            this.lblDoctorBirthday.Location = new System.Drawing.Point(7, 301);
-            this.lblDoctorBirthday.Name = "lblDoctorBirthday";
-            this.lblDoctorBirthday.Size = new System.Drawing.Size(45, 13);
-            this.lblDoctorBirthday.TabIndex = 18;
-            this.lblDoctorBirthday.Text = "Birthday";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(91, 295);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 19;
-            // 
-            // lblDoctorPhoneNumber
-            // 
-            this.lblDoctorPhoneNumber.AutoSize = true;
-            this.lblDoctorPhoneNumber.Location = new System.Drawing.Point(7, 333);
-            this.lblDoctorPhoneNumber.Name = "lblDoctorPhoneNumber";
-            this.lblDoctorPhoneNumber.Size = new System.Drawing.Size(78, 13);
-            this.lblDoctorPhoneNumber.TabIndex = 20;
-            this.lblDoctorPhoneNumber.Text = "Phone Number";
-            // 
-            // txtDoctorPhoneNumber
-            // 
-            this.txtDoctorPhoneNumber.Location = new System.Drawing.Point(91, 330);
-            this.txtDoctorPhoneNumber.Name = "txtDoctorPhoneNumber";
-            this.txtDoctorPhoneNumber.Size = new System.Drawing.Size(200, 20);
-            this.txtDoctorPhoneNumber.TabIndex = 21;
-            // 
-            // lblDoctorBloodGroup
-            // 
-            this.lblDoctorBloodGroup.AutoSize = true;
-            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 243);
-            this.lblDoctorBloodGroup.Name = "lblDoctorBloodGroup";
-            this.lblDoctorBloodGroup.Size = new System.Drawing.Size(66, 13);
-            this.lblDoctorBloodGroup.TabIndex = 22;
-            this.lblDoctorBloodGroup.Text = "Blood Group";
-            // 
-            // comboBoxDoctorBloodGroup
-            // 
-            this.comboBoxDoctorBloodGroup.FormattingEnabled = true;
-            this.comboBoxDoctorBloodGroup.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"});
-            this.comboBoxDoctorBloodGroup.Location = new System.Drawing.Point(91, 240);
-            this.comboBoxDoctorBloodGroup.Name = "comboBoxDoctorBloodGroup";
-            this.comboBoxDoctorBloodGroup.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxDoctorBloodGroup.TabIndex = 23;
             // 
             // DoctorHome
             // 
@@ -432,24 +433,24 @@
         private System.Windows.Forms.Panel panelDoctorGenarelInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDoctorFirstName;
-        private System.Windows.Forms.TextBox txtDoctorName;
+        private System.Windows.Forms.TextBox txtDoctorFirstName;
         private System.Windows.Forms.Button btnDoctorGanarelInfoSave;
-        private System.Windows.Forms.TextBox txtDoctorFName;
+        private System.Windows.Forms.TextBox txtDoctorLastName;
         private System.Windows.Forms.Label lblDoctorLastName;
         private System.Windows.Forms.Label lblDoctorMotherName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDoctorFatherName;
+        private System.Windows.Forms.TextBox txtDoctorMotherName;
         private System.Windows.Forms.Label lblDoctorFatherName;
         private System.Windows.Forms.Label lblDoctorEmailAddress;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDoctorAddress;
+        private System.Windows.Forms.TextBox txtDoctorEmail;
         private System.Windows.Forms.Label lblDoctorAddress;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Label lblDoctorBirthday;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
-        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Label lblDoctorGender;
-        private System.Windows.Forms.ComboBox comboBoxDoctorBloodGroup;
+        private System.Windows.Forms.ComboBox cbDoctorBloodGroup;
         private System.Windows.Forms.Label lblDoctorBloodGroup;
         private System.Windows.Forms.TextBox txtDoctorPhoneNumber;
         private System.Windows.Forms.Label lblDoctorPhoneNumber;
