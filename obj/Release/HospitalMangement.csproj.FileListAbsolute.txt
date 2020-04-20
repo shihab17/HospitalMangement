@@ -1,0 +1,12 @@
+F:\AIUB\C#\HospitalMangement\HospitalMangement\bin\Release\HospitalMangement.exe.config
+F:\AIUB\C#\HospitalMangement\HospitalMangement\bin\Release\HospitalMangement.exe
+F:\AIUB\C#\HospitalMangement\HospitalMangement\bin\Release\HospitalMangement.pdb
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.csprojAssemblyReference.cache
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.loginForm.resources
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.Properties.Resources.resources
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.csproj.GenerateResource.cache
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.csproj.CoreCompileInputs.cache
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.exe
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.pdb
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.AdminHome.resources
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.DoctorHome.resources

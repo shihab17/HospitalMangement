@@ -392,10 +392,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(283, 130);
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Location = new System.Drawing.Point(226, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 20);
+            this.label2.Size = new System.Drawing.Size(402, 31);
             this.label2.TabIndex = 8;
             this.label2.Text = "Welcome To Doctor Home Page";
             // 
