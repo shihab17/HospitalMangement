@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalMangement.Forms.Management;
 
 namespace HospitalMangement
 {
@@ -24,6 +25,18 @@ namespace HospitalMangement
             DoctorHome doctor = new DoctorHome();
             doctor.Show();
             this.Hide();
+        }
+
+        private void btnManagement_Click(object sender, EventArgs e)
+        {
+            btnManagement m = new btnManagement();
+            m.Show();
+            this.Close();
+        }
+
+        private void btnDepartment_Click(object sender, EventArgs e)
+        {
+            Departments d = new Departments();
         }
     }
 }

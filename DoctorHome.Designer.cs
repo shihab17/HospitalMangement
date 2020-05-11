@@ -37,6 +37,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelAddDoctor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMoreInformation = new System.Windows.Forms.Panel();
+            this.cbDesignation = new System.Windows.Forms.ComboBox();
+            this.cbEducationQualification = new System.Windows.Forms.ComboBox();
+            this.cbVisitingTime = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnDoctorSave = new System.Windows.Forms.Button();
+            this.lblDesignation = new System.Windows.Forms.Label();
             this.panelDoctorGenarelInfo = new System.Windows.Forms.Panel();
             this.cbDoctorBloodGroup = new System.Windows.Forms.ComboBox();
             this.lblDoctorBloodGroup = new System.Windows.Forms.Label();
@@ -62,8 +73,13 @@
             this.txtDoctorLastName = new System.Windows.Forms.TextBox();
             this.lblDoctorLastName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnViewDoctor = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.listBoxItem = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelAddDoctor.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelMoreInformation.SuspendLayout();
             this.panelDoctorGenarelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +135,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 9);
+            this.button1.Location = new System.Drawing.Point(18, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 23);
             this.button1.TabIndex = 6;
@@ -142,14 +158,136 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelMoreInformation);
             this.panel1.Controls.Add(this.panelDoctorGenarelInfo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panelAddDoctor);
-            this.panel1.Location = new System.Drawing.Point(2, 38);
+            this.panel1.Location = new System.Drawing.Point(12, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(795, 527);
+            this.panel1.Size = new System.Drawing.Size(795, 577);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // panelMoreInformation
+            // 
+            this.panelMoreInformation.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelMoreInformation.Controls.Add(this.button2);
+            this.panelMoreInformation.Controls.Add(this.listBoxItem);
+            this.panelMoreInformation.Controls.Add(this.cbDesignation);
+            this.panelMoreInformation.Controls.Add(this.cbEducationQualification);
+            this.panelMoreInformation.Controls.Add(this.cbVisitingTime);
+            this.panelMoreInformation.Controls.Add(this.label7);
+            this.panelMoreInformation.Controls.Add(this.label4);
+            this.panelMoreInformation.Controls.Add(this.label6);
+            this.panelMoreInformation.Controls.Add(this.checkedListBox1);
+            this.panelMoreInformation.Controls.Add(this.label3);
+            this.panelMoreInformation.Controls.Add(this.btnDoctorSave);
+            this.panelMoreInformation.Controls.Add(this.lblDesignation);
+            this.panelMoreInformation.Location = new System.Drawing.Point(404, 3);
+            this.panelMoreInformation.Name = "panelMoreInformation";
+            this.panelMoreInformation.Size = new System.Drawing.Size(357, 361);
+            this.panelMoreInformation.TabIndex = 10;
+            // 
+            // cbDesignation
+            // 
+            this.cbDesignation.FormattingEnabled = true;
+            this.cbDesignation.Items.AddRange(new object[] {
+            "4.00 PM - 9.00 PM"});
+            this.cbDesignation.Location = new System.Drawing.Point(126, 67);
+            this.cbDesignation.Name = "cbDesignation";
+            this.cbDesignation.Size = new System.Drawing.Size(215, 21);
+            this.cbDesignation.TabIndex = 26;
+            // 
+            // cbEducationQualification
+            // 
+            this.cbEducationQualification.FormattingEnabled = true;
+            this.cbEducationQualification.Items.AddRange(new object[] {
+            "4.00 PM - 9.00 PM"});
+            this.cbEducationQualification.Location = new System.Drawing.Point(126, 34);
+            this.cbEducationQualification.Name = "cbEducationQualification";
+            this.cbEducationQualification.Size = new System.Drawing.Size(215, 21);
+            this.cbEducationQualification.TabIndex = 25;
+            // 
+            // cbVisitingTime
+            // 
+            this.cbVisitingTime.FormattingEnabled = true;
+            this.cbVisitingTime.Items.AddRange(new object[] {
+            "4.00 PM - 9.00 PM"});
+            this.cbVisitingTime.Location = new System.Drawing.Point(126, 95);
+            this.cbVisitingTime.Name = "cbVisitingTime";
+            this.cbVisitingTime.Size = new System.Drawing.Size(215, 21);
+            this.cbVisitingTime.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Select Visiting Time";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Add Visit Day";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(123, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "More Information";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Saturday",
+            "Sunday",
+            "Monday",
+            "Tuseday",
+            "Wednesday",
+            "Thursday"});
+            this.checkedListBox1.Location = new System.Drawing.Point(126, 122);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(215, 94);
+            this.checkedListBox1.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Educational Qualification";
+            // 
+            // btnDoctorSave
+            // 
+            this.btnDoctorSave.Location = new System.Drawing.Point(192, 311);
+            this.btnDoctorSave.Name = "btnDoctorSave";
+            this.btnDoctorSave.Size = new System.Drawing.Size(54, 23);
+            this.btnDoctorSave.TabIndex = 4;
+            this.btnDoctorSave.Text = "Save";
+            this.btnDoctorSave.UseVisualStyleBackColor = true;
+            this.btnDoctorSave.Click += new System.EventHandler(this.btnDoctorSave_Click);
+            // 
+            // lblDesignation
+            // 
+            this.lblDesignation.AutoSize = true;
+            this.lblDesignation.Location = new System.Drawing.Point(3, 70);
+            this.lblDesignation.Name = "lblDesignation";
+            this.lblDesignation.Size = new System.Drawing.Size(81, 13);
+            this.lblDesignation.TabIndex = 3;
+            this.lblDesignation.Text = "DESIGNATION";
             // 
             // panelDoctorGenarelInfo
             // 
@@ -180,7 +318,7 @@
             this.panelDoctorGenarelInfo.Controls.Add(this.lblDoctorLastName);
             this.panelDoctorGenarelInfo.Location = new System.Drawing.Point(3, 71);
             this.panelDoctorGenarelInfo.Name = "panelDoctorGenarelInfo";
-            this.panelDoctorGenarelInfo.Size = new System.Drawing.Size(357, 415);
+            this.panelDoctorGenarelInfo.Size = new System.Drawing.Size(357, 421);
             this.panelDoctorGenarelInfo.TabIndex = 9;
             // 
             // cbDoctorBloodGroup
@@ -369,7 +507,7 @@
             this.btnDoctorGanarelInfoSave.Name = "btnDoctorGanarelInfoSave";
             this.btnDoctorGanarelInfoSave.Size = new System.Drawing.Size(54, 23);
             this.btnDoctorGanarelInfoSave.TabIndex = 4;
-            this.btnDoctorGanarelInfoSave.Text = "Save";
+            this.btnDoctorGanarelInfoSave.Text = "Next";
             this.btnDoctorGanarelInfoSave.UseVisualStyleBackColor = true;
             this.btnDoctorGanarelInfoSave.Click += new System.EventHandler(this.btnDoctorGanarelInfoSave_Click);
             // 
@@ -401,11 +539,51 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Welcome To Doctor Home Page";
             // 
+            // btnViewDoctor
+            // 
+            this.btnViewDoctor.Location = new System.Drawing.Point(135, 24);
+            this.btnViewDoctor.Name = "btnViewDoctor";
+            this.btnViewDoctor.Size = new System.Drawing.Size(79, 23);
+            this.btnViewDoctor.TabIndex = 9;
+            this.btnViewDoctor.Text = "View Doctor";
+            this.btnViewDoctor.UseVisualStyleBackColor = true;
+            this.btnViewDoctor.Click += new System.EventHandler(this.btnViewDoctor_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(268, 24);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(79, 23);
+            this.btnBack.TabIndex = 10;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // listBoxItem
+            // 
+            this.listBoxItem.FormattingEnabled = true;
+            this.listBoxItem.Location = new System.Drawing.Point(20, 229);
+            this.listBoxItem.Name = "listBoxItem";
+            this.listBoxItem.Size = new System.Drawing.Size(120, 95);
+            this.listBoxItem.TabIndex = 27;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(49, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 577);
+            this.ClientSize = new System.Drawing.Size(826, 650);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnViewDoctor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Name = "DoctorHome";
@@ -414,6 +592,8 @@
             this.panelAddDoctor.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelMoreInformation.ResumeLayout(false);
+            this.panelMoreInformation.PerformLayout();
             this.panelDoctorGenarelInfo.ResumeLayout(false);
             this.panelDoctorGenarelInfo.PerformLayout();
             this.ResumeLayout(false);
@@ -456,5 +636,20 @@
         private System.Windows.Forms.Label lblDoctorBloodGroup;
         private System.Windows.Forms.TextBox txtDoctorPhoneNumber;
         private System.Windows.Forms.Label lblDoctorPhoneNumber;
+        private System.Windows.Forms.Panel panelMoreInformation;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDoctorSave;
+        private System.Windows.Forms.Label lblDesignation;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbVisitingTime;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.ComboBox cbDesignation;
+        private System.Windows.Forms.ComboBox cbEducationQualification;
+        private System.Windows.Forms.Button btnViewDoctor;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox listBoxItem;
     }
 }

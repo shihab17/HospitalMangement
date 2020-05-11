@@ -1,5 +1,6 @@
 ﻿using HospitalMangement.Database;
 using HospitalMangement.Entities;
+using HospitalMangement.Forms.Doctor;
 using HospitalMangement.RandomNumberSample;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,6 @@ namespace HospitalMangement
        {
             InitializeComponent();
             this.previousForm = _previousForm;
-
-
        }
         public DoctorHome(Form _AddDoctor, Doctors doctor)
         {
@@ -138,6 +137,8 @@ namespace HospitalMangement
 
             }
         }
+        
+       
         private void button1_Click(object sender, EventArgs e)
         {
             panelAddDoctor.Visible = true;
@@ -200,6 +201,60 @@ namespace HospitalMangement
             }
             else { MessageBox.Show("Something went wrong"); }
             commandd.Connection.Close();
+        }
+
+        private void btnViewDoctor_Click(object sender, EventArgs e)
+        {
+            ViewDoctor vd = new ViewDoctor();
+            vd.Show();
+            this.Close();
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AdminHome ah = new AdminHome();
+            ah.Show();
+            this.Close();
+           // previousForm.Show();
+          //  this.Close();
+        }
+
+        private void btnDoctorSave_Click(object sender, EventArgs e)
+        {
+            DataAccess dataaccess = new DataAccess();
+            checkedListBox1.Items.Clear();
+            foreach (string s in checkedListBox1.CheckedItems)
+            {
+                checkedListBox1.Items.Add(s);
+            }
+            string sql = string.Format("insert into tblDoctorLogin (doctorUserName, updatedTime,UserType) " +
+                 "Values ('{0}','{1}','{2}')", txtDoctorUserName.Text, System.DateTime.Now.ToString(), 1);
+
+            SqlCommand command = dataaccess.GetCommand(sql);
+
+            command.Connection.Open();
+
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Saved Successfully!!");
+                datatrsfr();
+
+            }
+            else { MessageBox.Show("Something went wrong"); }
+
+            command.Connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBoxItem.Items.Clear();
+            foreach (string s in checkedListBox1.CheckedItems)
+            {
+                listBoxItem.Items.Add(s);
+            }
         }
     }
 }

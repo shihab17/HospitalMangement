@@ -60,7 +60,26 @@
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Doctors.cs" />
+    <Compile Include="Entities\MedicalServices.cs" />
     <Compile Include="Entities\Users.cs" />
+    <Compile Include="Forms\Doctor\ViewDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctor\ViewDoctor.Designer.cs">
+      <DependentUpon>ViewDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Management\Departments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Management\Departments.Designer.cs">
+      <DependentUpon>Departments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Management\Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Management\Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Instance.cs" />
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Management\Departments.resx">
+      <DependentUpon>Departments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Management\Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
