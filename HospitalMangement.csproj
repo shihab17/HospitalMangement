@@ -96,6 +96,9 @@
     <EmbeddedResource Include="DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doctor\ViewDoctor.resx">
+      <DependentUpon>ViewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Management\Departments.resx">
       <DependentUpon>Departments.cs</DependentUpon>
     </EmbeddedResource>
