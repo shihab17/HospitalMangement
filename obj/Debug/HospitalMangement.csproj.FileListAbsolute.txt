@@ -13,3 +13,5 @@ C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.csproj.Cor
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.exe
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.pdb
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Doctor.ViewDoctor.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.EmployeeHome.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Employee.ViewEmployee.resources

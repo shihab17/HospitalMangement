@@ -38,5 +38,13 @@ namespace HospitalMangement
         {
             Departments d = new Departments();
         }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+
+            EmployeeHome employee = new EmployeeHome();
+            employee.Show();
+            this.Hide();
+        }
     }
 }

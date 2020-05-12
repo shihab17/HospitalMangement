@@ -256,5 +256,10 @@ namespace HospitalMangement
                 listBoxItem.Items.Add(s);
             }
         }
+
+        private void txtDoctorId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
