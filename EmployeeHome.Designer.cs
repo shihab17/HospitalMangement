@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnViewEmployee = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblDoctorBloodGroup = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.panelEmployeeGenarelInfo = new System.Windows.Forms.Panel();
             this.cbEmployeeBloodGroup = new System.Windows.Forms.ComboBox();
-            this.lblDoctorBloodGroup = new System.Windows.Forms.Label();
             this.txtEmployeePhoneNumber = new System.Windows.Forms.TextBox();
             this.lblDoctorPhoneNumber = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +42,6 @@
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.lblDoctorGender = new System.Windows.Forms.Label();
             this.lblDoctorEmailAddress = new System.Windows.Forms.Label();
-            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.txtEmployeeEmail = new System.Windows.Forms.TextBox();
             this.lblDoctorAddress = new System.Windows.Forms.Label();
             this.lblDoctorMotherName = new System.Windows.Forms.Label();
@@ -58,65 +55,56 @@
             this.txtEmployeeId = new System.Windows.Forms.TextBox();
             this.txtEmployeeLastName = new System.Windows.Forms.TextBox();
             this.lblDoctorLastName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelAddEmployee = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmployeeUserName = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.txtEmployeePassword = new System.Windows.Forms.TextBox();
             this.lblEmployeePassword = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panelEmployeeGenarelInfo.SuspendLayout();
             this.panelAddEmployee.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panelEmployeeGenarelInfo);
-            this.panel1.Controls.Add(this.panelAddEmployee);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(91, 53);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(795, 577);
-            this.panel1.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(226, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 31);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Welcome To Employee Home Page";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(349, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(102, 25);
-            this.btnBack.TabIndex = 23;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnViewEmployee
             // 
-            this.btnViewEmployee.Location = new System.Drawing.Point(229, 12);
+            this.btnViewEmployee.Location = new System.Drawing.Point(222, 1);
             this.btnViewEmployee.Name = "btnViewEmployee";
-            this.btnViewEmployee.Size = new System.Drawing.Size(93, 27);
-            this.btnViewEmployee.TabIndex = 22;
+            this.btnViewEmployee.Size = new System.Drawing.Size(162, 27);
+            this.btnViewEmployee.TabIndex = 30;
             this.btnViewEmployee.Text = "View Employee";
             this.btnViewEmployee.UseVisualStyleBackColor = true;
+            this.btnViewEmployee.Click += new System.EventHandler(this.btnViewEmployee_Click);
             // 
-            // button1
+            // lblDoctorBloodGroup
             // 
-            this.button1.Location = new System.Drawing.Point(92, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 27);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Add Employee";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblDoctorBloodGroup.AutoSize = true;
+            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 243);
+            this.lblDoctorBloodGroup.Name = "lblDoctorBloodGroup";
+            this.lblDoctorBloodGroup.Size = new System.Drawing.Size(66, 13);
+            this.lblDoctorBloodGroup.TabIndex = 22;
+            this.lblDoctorBloodGroup.Text = "Blood Group";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(266, 13);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(54, 23);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtEmployeeAddress
+            // 
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(91, 174);
+            this.txtEmployeeAddress.Multiline = true;
+            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(200, 20);
+            this.txtEmployeeAddress.TabIndex = 11;
             // 
             // panelEmployeeGenarelInfo
             // 
@@ -166,15 +154,6 @@
             this.cbEmployeeBloodGroup.Name = "cbEmployeeBloodGroup";
             this.cbEmployeeBloodGroup.Size = new System.Drawing.Size(200, 21);
             this.cbEmployeeBloodGroup.TabIndex = 23;
-            // 
-            // lblDoctorBloodGroup
-            // 
-            this.lblDoctorBloodGroup.AutoSize = true;
-            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 243);
-            this.lblDoctorBloodGroup.Name = "lblDoctorBloodGroup";
-            this.lblDoctorBloodGroup.Size = new System.Drawing.Size(66, 13);
-            this.lblDoctorBloodGroup.TabIndex = 22;
-            this.lblDoctorBloodGroup.Text = "Blood Group";
             // 
             // txtEmployeePhoneNumber
             // 
@@ -247,14 +226,6 @@
             this.lblDoctorEmailAddress.Size = new System.Drawing.Size(32, 13);
             this.lblDoctorEmailAddress.TabIndex = 13;
             this.lblDoctorEmailAddress.Text = "Email";
-            // 
-            // txtEmployeeAddress
-            // 
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(91, 174);
-            this.txtEmployeeAddress.Multiline = true;
-            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(200, 20);
-            this.txtEmployeeAddress.TabIndex = 11;
             // 
             // txtEmployeeEmail
             // 
@@ -338,6 +309,7 @@
             this.btnEmployeeGanarelInfoSave.TabIndex = 4;
             this.btnEmployeeGanarelInfoSave.Text = "Next";
             this.btnEmployeeGanarelInfoSave.UseVisualStyleBackColor = true;
+            this.btnEmployeeGanarelInfoSave.Click += new System.EventHandler(this.btnEmployeeGanarelInfoSave_Click);
             // 
             // txtEmployeeId
             // 
@@ -362,6 +334,18 @@
             this.lblDoctorLastName.Size = new System.Drawing.Size(58, 13);
             this.lblDoctorLastName.TabIndex = 3;
             this.lblDoctorLastName.Text = "Last Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.Location = new System.Drawing.Point(226, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(441, 31);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Welcome To Employee Home Page";
             // 
             // panelAddEmployee
             // 
@@ -392,15 +376,6 @@
             this.txtEmployeeUserName.Size = new System.Drawing.Size(168, 20);
             this.txtEmployeeUserName.TabIndex = 0;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(266, 13);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(54, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
             // txtEmployeePassword
             // 
             this.txtEmployeePassword.Location = new System.Drawing.Point(82, 34);
@@ -417,37 +392,65 @@
             this.lblEmployeePassword.TabIndex = 3;
             this.lblEmployeePassword.Text = "Password";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelEmployeeGenarelInfo);
+            this.panel1.Controls.Add(this.panelAddEmployee);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(48, 34);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(532, 510);
+            this.panel1.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(58, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 27);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Add Employee";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(390, 1);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(162, 27);
+            this.btnBack.TabIndex = 31;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // EmployeeHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 682);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(998, 556);
             this.Controls.Add(this.btnViewEmployee);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Name = "EmployeeHome";
             this.Text = "EmployeeHome";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panelEmployeeGenarelInfo.ResumeLayout(false);
             this.panelEmployeeGenarelInfo.PerformLayout();
             this.panelAddEmployee.ResumeLayout(false);
             this.panelAddEmployee.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnViewEmployee;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblDoctorBloodGroup;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.Panel panelEmployeeGenarelInfo;
         private System.Windows.Forms.ComboBox cbEmployeeBloodGroup;
-        private System.Windows.Forms.Label lblDoctorBloodGroup;
         private System.Windows.Forms.TextBox txtEmployeePhoneNumber;
         private System.Windows.Forms.Label lblDoctorPhoneNumber;
         private System.Windows.Forms.DateTimePicker dtpDOB;
@@ -456,7 +459,6 @@
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Label lblDoctorGender;
         private System.Windows.Forms.Label lblDoctorEmailAddress;
-        private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.TextBox txtEmployeeEmail;
         private System.Windows.Forms.Label lblDoctorAddress;
         private System.Windows.Forms.Label lblDoctorMotherName;
@@ -470,11 +472,14 @@
         private System.Windows.Forms.TextBox txtEmployeeId;
         private System.Windows.Forms.TextBox txtEmployeeLastName;
         private System.Windows.Forms.Label lblDoctorLastName;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelAddEmployee;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmployeeUserName;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtEmployeePassword;
         private System.Windows.Forms.Label lblEmployeePassword;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

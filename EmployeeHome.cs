@@ -1,12 +1,11 @@
 ﻿using HospitalMangement.Database;
 using HospitalMangement.Entities;
-using HospitalMangement.Forms.Doctor;
 using HospitalMangement.Forms.Employee;
 using HospitalMangement.RandomNumberSample;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data; 
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -16,37 +15,48 @@ using System.Windows.Forms;
 
 namespace HospitalMangement
 {
-    public partial class EmployeeHome : Form
-    {
-        Form previousForm;
-        Users user;
-        Form Addemployee;
-        Employee employee;
-        public EmployeeHome(EmployeeHome employeeHome, Employee employee)
+    
+        public partial class EmployeeHome : Form
         {
-            InitializeComponent();
-            panelAddEmployee.Visible = false;
+            Form previousForm;
+            Users user;
+            Form Addemployee;
+            Employee employee;
+            public EmployeeHome()
+            {
+                InitializeComponent();
+                panelAddEmployee.Visible = false;
 
-            panelEmployeeGenarelInfo.Visible = false;
-        }
+                panelEmployeeGenarelInfo.Visible = false;
+            }
 
-        public EmployeeHome(Form _previousForm, Users _user)
+
+            public EmployeeHome(Form _previousForm, Users _user)
+            {
+                InitializeComponent();
+                this.previousForm = _previousForm;
+            }
+            public EmployeeHome(Form _AddEmployee, Employee employee)
+            {
+                InitializeComponent();
+                panelAddEmployee.Enabled = false;
+                label2.Visible = false;
+                txtEmployeeId.Enabled = false;
+                txtEmployeeId.Text = string.Format("{0}", employee.employeeId);
+                txtEmployeeUserName.Text = string.Format("{0}", employee.employeeUserName);
+                txtEmployeePassword.Text = string.Format("{0}", employee.employeePassword);
+            }
+
+
+            private void button1_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.previousForm = _previousForm;
-        }
-        public EmployeeHome(Form _AddEmployee, Employee employee)
-        {
-            InitializeComponent();
-            panelAddEmployee.Enabled = false;
+            panelAddEmployee.Visible = true;
+            panelEmployeeGenarelInfo.Visible = true;
+            panelEmployeeGenarelInfo.Enabled = false;
+            txtEmployeePassword.Enabled = false;
+            lblEmployeePassword.Enabled = false;
             label2.Visible = false;
-            txtEmployeeId.Enabled = false;
-            txtEmployeeId.Text = string.Format("{0}", employee.employeeId);
-            txtEmployeeUserName.Text = string.Format("{0}", employee.employeeUserName);
-            txtEmployeePassword.Text = string.Format("{0}", employee.employeePassword);
         }
-
-       
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -65,7 +75,6 @@ namespace HospitalMangement
 
 
             lblEmployeePassword.Enabled = true;
-            //txtDoctorPassword.Enabled = true;
         }
         public void loginTableInsert()
         {
@@ -130,18 +139,8 @@ namespace HospitalMangement
 
 
             }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-           panelAddEmployee.Visible = true;
-            panelEmployeeGenarelInfo.Visible = true;
-            panelEmployeeGenarelInfo.Enabled = false;
-            txtEmployeePassword.Enabled = false;
-            lblEmployeePassword.Enabled = false;
-            panel1.Visible = false;
-           //label2.Visible = false;//----------------prblm
-        }
 
+        }
 
         private void btnEmployeeGanarelInfoSave_Click(object sender, EventArgs e)
         {
@@ -164,13 +163,10 @@ namespace HospitalMangement
                 checkedRB = "Female";
             }
 
-            //  string sql1 = string.Format("insert into tblDoctorGenarelInfo (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
-            //      "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text,txtDoctorFirstName.Text,txtDoctorLastName.Text,txtDoctorFatherName.Text,txtDoctorMotherName.Text,txtDoctorAddress.Text,txtDoctorEmail.Text,cbIndex,checkedRB,dt, System.DateTime.Now.ToString());
-
-
+            
             string sql1 = string.Format("insert into tblemployeeGenarelInfo (employeeId,employeeFirstName,employeeLastName,employeeFatherName,employeeMotherName,employeeAddress,employeeEmail,employeeBG,employeeGender,employeeBirthday,employeePhoneNumber,updatedTime) " +
                  "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtEmployeeId.Text, txtEmployeeFirstName.Text, txtEmployeeLastName.Text, txtEmployeeFatherName.Text, txtEmployeeMotherName.Text, txtEmployeeAddress.Text, txtEmployeeEmail.Text, cbval, checkedRB, dt, txtEmployeePhoneNumber.Text, System.DateTime.Now.ToString());
-                                                                                                                         
+
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
             int rowsAffected = commandd.ExecuteNonQuery();
@@ -183,7 +179,7 @@ namespace HospitalMangement
             commandd.Connection.Close();
         }
 
-        private void btnViewDoctor_Click(object sender, EventArgs e)
+        private void btnViewEmployee_Click(object sender, EventArgs e)
         {
             ViewEmployee vd = new ViewEmployee();
             vd.Show();
