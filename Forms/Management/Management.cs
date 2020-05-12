@@ -77,7 +77,6 @@ namespace HospitalMangement.Forms.Management
             cbMS.ValueMember = "serviceId";
             cbMS.DisplayMember = "serviceName";
             cbMS.DataSource = dt;
-
         }
 
         private void btnServiceGo_Click(object sender, EventArgs e)

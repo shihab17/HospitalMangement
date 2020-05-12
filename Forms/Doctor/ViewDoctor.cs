@@ -24,7 +24,7 @@ namespace HospitalMangement.Forms.Doctor
         DataTable dt;
         private void buttonView_Click(object sender, EventArgs e)
         {
-            //DataAccess dataaccess = new DataAccess();
+           // DataAccess dataaccess = new DataAccess();
 
             //string sql1 = string.Format("Select * FROM tblDoctorGenarelInfo ");
             //SqlCommand commandd = dataaccess.GetCommand(sql1);
@@ -38,31 +38,33 @@ namespace HospitalMangement.Forms.Doctor
 
             //commandd.Connection.Close();
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pranto\Documents\hos.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\AIUB\C#\HospitalMangement\hospital.mdf;Integrated Security=True;Connect Timeout=30");
+            // con.Open();
+            DataAccess dataaccess = new DataAccess();
             String query = "Select * FROM tblDoctorGenarelInfo ";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            //DataTable dt = new DataTable();
-            dt = new DataTable();
+            SqlCommand commandd = dataaccess.GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query,commandd.Connection);
+            DataTable dt = new DataTable();
+           // dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-            con.Close();
+          //  commandd.Connection.Close();
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            //DataAccess dataaccess = new DataAccess();
+            DataAccess dataaccess = new DataAccess();
 
-            //string sql1 = string.Format("Select * FROM tblDoctorGenarelInfo ");
-            //SqlCommand commandd = dataaccess.GetCommand(sql1);
-            //commandd.Connection.Open();
-            //String query = "UPDATE tblDoctorGenarelInfo SET doctorFirstName= '" + txtDoctorFirstName.Text + "',doctorLastName= '" + txtDoctorLastName.Text + "',doctorFatherName= '" + txtDoctorFatherName.Text + "',doctorMotherName= '" + txtDoctorMotherName.Text + "',doctorAddress= '" + txtDoctorAddress.Text + "',doctorEmail= '" + txtDoctorEmail.Text + "',doctorBG= '" + cbDoctorBloodGroup.Text + "',doctorGender= '" + combogender.Text + "',doctorBirthday= '" + dtpDOB.Text + "',doctorPhoneNumber= '" + txtDoctorPhoneNumber.Text + "',updatedTime= '" + txtTime.Text + "' WHERE doctorId ='" + txtDoctorId.Text + "' ";
+            string sql1 = string.Format("Select * FROM tblDoctorGenarelInfo ");
+            SqlCommand commandd = dataaccess.GetCommand(sql1);
+            commandd.Connection.Open();
+            String query = "UPDATE tblDoctorGenarelInfo SET doctorFirstName= '" + txtDoctorFirstName.Text + "',doctorLastName= '" + txtDoctorLastName.Text + "',doctorFatherName= '" + txtDoctorFatherName.Text + "',doctorMotherName= '" + txtDoctorMotherName.Text + "',doctorAddress= '" + txtDoctorAddress.Text + "',doctorEmail= '" + txtDoctorEmail.Text + "',doctorBG= '" + cbDoctorBloodGroup.Text + "',doctorGender= '" + combogender.Text + "',doctorBirthday= '" + dtpDOB.Text + "',doctorPhoneNumber= '" + txtDoctorPhoneNumber.Text + "' WHERE doctorId ='" + txtDoctorId.Text + "' ";
 
-            //SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-            //sda.SelectCommand.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+            sda.SelectCommand.ExecuteNonQuery();
 
 
-            //commandd.Connection.Close();
+            commandd.Connection.Close();
 
 
 

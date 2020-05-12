@@ -37,6 +37,8 @@ namespace HospitalMangement
         private void btnDepartment_Click(object sender, EventArgs e)
         {
             Departments d = new Departments();
+            d.Show();
+            this.Close();
         }
     }
 }

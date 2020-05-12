@@ -38,7 +38,7 @@
             // 
             // btnDoctor
             // 
-            this.btnDoctor.Location = new System.Drawing.Point(206, 23);
+            this.btnDoctor.Location = new System.Drawing.Point(26, 23);
             this.btnDoctor.Name = "btnDoctor";
             this.btnDoctor.Size = new System.Drawing.Size(75, 23);
             this.btnDoctor.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // btnManagement
             // 
-            this.btnManagement.Location = new System.Drawing.Point(325, 39);
+            this.btnManagement.Location = new System.Drawing.Point(26, 84);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.Size = new System.Drawing.Size(95, 40);
             this.btnManagement.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // btnDepartment
             // 
-            this.btnDepartment.Location = new System.Drawing.Point(444, 23);
+            this.btnDepartment.Location = new System.Drawing.Point(26, 150);
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(75, 23);
             this.btnDepartment.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(58, 64);
+            this.panel1.Location = new System.Drawing.Point(513, 150);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 170);
             this.panel1.TabIndex = 3;

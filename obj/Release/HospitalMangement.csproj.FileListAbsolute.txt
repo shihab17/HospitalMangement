@@ -12,3 +12,4 @@ F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.csp
 F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.csproj.CoreCompileInputs.cache
 F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.exe
 F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.pdb
+F:\AIUB\C#\HospitalMangement\HospitalMangement\obj\Release\HospitalMangement.Forms.Doctor.ViewDoctor.resources

@@ -59,7 +59,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panelSelectedMS);
             this.panel1.Controls.Add(this.panelAddService);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(36, 96);
@@ -130,7 +129,7 @@
             this.panelSelectedMS.Controls.Add(this.cbMS);
             this.panelSelectedMS.Controls.Add(this.btnServiceGo);
             this.panelSelectedMS.Controls.Add(this.label3);
-            this.panelSelectedMS.Location = new System.Drawing.Point(16, 87);
+            this.panelSelectedMS.Location = new System.Drawing.Point(3, 11);
             this.panelSelectedMS.Name = "panelSelectedMS";
             this.panelSelectedMS.Size = new System.Drawing.Size(375, 194);
             this.panelSelectedMS.TabIndex = 2;
@@ -166,6 +165,7 @@
             // panelAddService
             // 
             this.panelAddService.Controls.Add(this.txtServiceName);
+            this.panelAddService.Controls.Add(this.panelSelectedMS);
             this.panelAddService.Controls.Add(this.label2);
             this.panelAddService.Controls.Add(this.btnServiceAdd);
             this.panelAddService.Location = new System.Drawing.Point(19, 84);
