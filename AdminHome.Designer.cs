@@ -33,6 +33,7 @@
             this.btnDepartment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,9 +49,10 @@
             // 
             // btnManagement
             // 
-            this.btnManagement.Location = new System.Drawing.Point(26, 84);
+
+            this.btnManagement.Location = new System.Drawing.Point(424, 14);
+
             this.btnManagement.Name = "btnManagement";
-            this.btnManagement.Size = new System.Drawing.Size(95, 40);
             this.btnManagement.TabIndex = 1;
             this.btnManagement.Text = "Management";
             this.btnManagement.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // btnDepartment
             // 
-            this.btnDepartment.Location = new System.Drawing.Point(26, 150);
+
+            this.btnDepartment.Location = new System.Drawing.Point(557, 23);
             this.btnDepartment.Name = "btnDepartment";
-            this.btnDepartment.Size = new System.Drawing.Size(75, 23);
+           
             this.btnDepartment.TabIndex = 2;
             this.btnDepartment.Text = "Department";
             this.btnDepartment.UseVisualStyleBackColor = true;
@@ -75,6 +78,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnEmployee);
             this.panel2.Controls.Add(this.btnManagement);
             this.panel2.Controls.Add(this.btnDoctor);
             this.panel2.Controls.Add(this.panel1);
@@ -83,6 +87,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 309);
             this.panel2.TabIndex = 4;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.Location = new System.Drawing.Point(303, 23);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployee.TabIndex = 4;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // AdminHome
             // 
@@ -104,5 +118,6 @@
         private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnEmployee;
     }
 }

@@ -59,7 +59,14 @@
     <Compile Include="DoctorHome.Designer.cs">
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeHome.Designer.cs">
+      <DependentUpon>EmployeeHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Doctors.cs" />
+    <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\MedicalServices.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Forms\Doctor\ViewDoctor.cs">
@@ -67,6 +74,12 @@
     </Compile>
     <Compile Include="Forms\Doctor\ViewDoctor.Designer.cs">
       <DependentUpon>ViewDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\ViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Management\Departments.cs">
       <SubType>Form</SubType>
@@ -96,8 +109,14 @@
     <EmbeddedResource Include="DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeHome.resx">
+      <DependentUpon>EmployeeHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\ViewDoctor.resx">
       <DependentUpon>ViewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Management\Departments.resx">
       <DependentUpon>Departments.cs</DependentUpon>

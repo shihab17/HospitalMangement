@@ -38,6 +38,8 @@
             this.panelAddDoctor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMoreInformation = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listBoxItem = new System.Windows.Forms.ListBox();
             this.cbDesignation = new System.Windows.Forms.ComboBox();
             this.cbEducationQualification = new System.Windows.Forms.ComboBox();
             this.cbVisitingTime = new System.Windows.Forms.ComboBox();
@@ -75,8 +77,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnViewDoctor = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.listBoxItem = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panelAddDoctor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMoreInformation.SuspendLayout();
@@ -132,6 +132,7 @@
             this.txtDoctorId.Size = new System.Drawing.Size(85, 20);
             this.txtDoctorId.TabIndex = 5;
             this.txtDoctorId.Text = "Doctor User Id";
+            this.txtDoctorId.TextChanged += new System.EventHandler(this.txtDoctorId_TextChanged);
             // 
             // button1
             // 
@@ -162,7 +163,7 @@
             this.panel1.Controls.Add(this.panelDoctorGenarelInfo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panelAddDoctor);
-            this.panel1.Location = new System.Drawing.Point(12, 70);
+            this.panel1.Location = new System.Drawing.Point(18, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(795, 577);
             this.panel1.TabIndex = 8;
@@ -187,6 +188,24 @@
             this.panelMoreInformation.Name = "panelMoreInformation";
             this.panelMoreInformation.Size = new System.Drawing.Size(357, 361);
             this.panelMoreInformation.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(49, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // listBoxItem
+            // 
+            this.listBoxItem.FormattingEnabled = true;
+            this.listBoxItem.Location = new System.Drawing.Point(20, 229);
+            this.listBoxItem.Name = "listBoxItem";
+            this.listBoxItem.Size = new System.Drawing.Size(120, 95);
+            this.listBoxItem.TabIndex = 27;
             // 
             // cbDesignation
             // 
@@ -558,24 +577,6 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // listBoxItem
-            // 
-            this.listBoxItem.FormattingEnabled = true;
-            this.listBoxItem.Location = new System.Drawing.Point(20, 229);
-            this.listBoxItem.Name = "listBoxItem";
-            this.listBoxItem.Size = new System.Drawing.Size(120, 95);
-            this.listBoxItem.TabIndex = 27;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(49, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DoctorHome
             // 
