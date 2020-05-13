@@ -38,15 +38,14 @@
             this.panelAddDoctor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMoreInformation = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBoxItem = new System.Windows.Forms.ListBox();
+            this.cbDoctorDepartment = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbDesignation = new System.Windows.Forms.ComboBox();
-            this.cbEducationQualification = new System.Windows.Forms.ComboBox();
             this.cbVisitingTime = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cblVisitDay = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDoctorSave = new System.Windows.Forms.Button();
             this.lblDesignation = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnViewDoctor = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.txtDoctorEdu = new System.Windows.Forms.TextBox();
             this.panelAddDoctor.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMoreInformation.SuspendLayout();
@@ -172,15 +172,15 @@
             // panelMoreInformation
             // 
             this.panelMoreInformation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelMoreInformation.Controls.Add(this.button2);
-            this.panelMoreInformation.Controls.Add(this.listBoxItem);
+            this.panelMoreInformation.Controls.Add(this.txtDoctorEdu);
+            this.panelMoreInformation.Controls.Add(this.cbDoctorDepartment);
+            this.panelMoreInformation.Controls.Add(this.label8);
             this.panelMoreInformation.Controls.Add(this.cbDesignation);
-            this.panelMoreInformation.Controls.Add(this.cbEducationQualification);
             this.panelMoreInformation.Controls.Add(this.cbVisitingTime);
             this.panelMoreInformation.Controls.Add(this.label7);
             this.panelMoreInformation.Controls.Add(this.label4);
             this.panelMoreInformation.Controls.Add(this.label6);
-            this.panelMoreInformation.Controls.Add(this.checkedListBox1);
+            this.panelMoreInformation.Controls.Add(this.cblVisitDay);
             this.panelMoreInformation.Controls.Add(this.label3);
             this.panelMoreInformation.Controls.Add(this.btnDoctorSave);
             this.panelMoreInformation.Controls.Add(this.lblDesignation);
@@ -189,23 +189,22 @@
             this.panelMoreInformation.Size = new System.Drawing.Size(357, 361);
             this.panelMoreInformation.TabIndex = 10;
             // 
-            // button2
+            // cbDoctorDepartment
             // 
-            this.button2.Location = new System.Drawing.Point(49, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cbDoctorDepartment.FormattingEnabled = true;
+            this.cbDoctorDepartment.Location = new System.Drawing.Point(131, 258);
+            this.cbDoctorDepartment.Name = "cbDoctorDepartment";
+            this.cbDoctorDepartment.Size = new System.Drawing.Size(210, 21);
+            this.cbDoctorDepartment.TabIndex = 28;
             // 
-            // listBoxItem
+            // label8
             // 
-            this.listBoxItem.FormattingEnabled = true;
-            this.listBoxItem.Location = new System.Drawing.Point(20, 229);
-            this.listBoxItem.Name = "listBoxItem";
-            this.listBoxItem.Size = new System.Drawing.Size(120, 95);
-            this.listBoxItem.TabIndex = 27;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(4, 261);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 13);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Select Department Time";
             // 
             // cbDesignation
             // 
@@ -216,16 +215,6 @@
             this.cbDesignation.Name = "cbDesignation";
             this.cbDesignation.Size = new System.Drawing.Size(215, 21);
             this.cbDesignation.TabIndex = 26;
-            // 
-            // cbEducationQualification
-            // 
-            this.cbEducationQualification.FormattingEnabled = true;
-            this.cbEducationQualification.Items.AddRange(new object[] {
-            "4.00 PM - 9.00 PM"});
-            this.cbEducationQualification.Location = new System.Drawing.Point(126, 34);
-            this.cbEducationQualification.Name = "cbEducationQualification";
-            this.cbEducationQualification.Size = new System.Drawing.Size(215, 21);
-            this.cbEducationQualification.TabIndex = 25;
             // 
             // cbVisitingTime
             // 
@@ -265,20 +254,20 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "More Information";
             // 
-            // checkedListBox1
+            // cblVisitDay
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.cblVisitDay.FormattingEnabled = true;
+            this.cblVisitDay.Items.AddRange(new object[] {
             "Saturday",
             "Sunday",
             "Monday",
             "Tuseday",
             "Wednesday",
             "Thursday"});
-            this.checkedListBox1.Location = new System.Drawing.Point(126, 122);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(215, 94);
-            this.checkedListBox1.TabIndex = 9;
+            this.cblVisitDay.Location = new System.Drawing.Point(126, 122);
+            this.cblVisitDay.Name = "cblVisitDay";
+            this.cblVisitDay.Size = new System.Drawing.Size(215, 94);
+            this.cblVisitDay.TabIndex = 9;
             // 
             // label3
             // 
@@ -578,6 +567,13 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // txtDoctorEdu
+            // 
+            this.txtDoctorEdu.Location = new System.Drawing.Point(126, 34);
+            this.txtDoctorEdu.Name = "txtDoctorEdu";
+            this.txtDoctorEdu.Size = new System.Drawing.Size(215, 20);
+            this.txtDoctorEdu.TabIndex = 29;
+            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,12 +641,12 @@
         private System.Windows.Forms.ComboBox cbVisitingTime;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox cblVisitDay;
         private System.Windows.Forms.ComboBox cbDesignation;
-        private System.Windows.Forms.ComboBox cbEducationQualification;
         private System.Windows.Forms.Button btnViewDoctor;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBoxItem;
+        private System.Windows.Forms.ComboBox cbDoctorDepartment;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDoctorEdu;
     }
 }

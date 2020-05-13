@@ -27,6 +27,8 @@ namespace HospitalMangement
             panelAddDoctor.Visible = false;
             
             panelDoctorGenarelInfo.Visible = false;
+            refreshdata();
+            panelMoreInformation.Visible = false;
 
         }
         public DoctorHome(Form _previousForm, Users _user)
@@ -43,6 +45,8 @@ namespace HospitalMangement
             txtDoctorId.Text = string.Format("{0}", doctor.doctorId);
             txtDoctorUserName.Text = string.Format("{0}", doctor.doctorUserName);
             txtDoctorPassword.Text = string.Format("{0}", doctor.doctorPassword);
+            panelMoreInformation.Visible = true;
+            refreshdata();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -165,6 +169,7 @@ namespace HospitalMangement
         {
             
             DoctorGenarelInfoInsert();
+            panelMoreInformation.Enabled = true;
 
         }
         public void DoctorGenarelInfoInsert()
@@ -201,6 +206,7 @@ namespace HospitalMangement
             }
             else { MessageBox.Show("Something went wrong"); }
             commandd.Connection.Close();
+           
         }
 
         private void btnViewDoctor_Click(object sender, EventArgs e)
@@ -223,13 +229,31 @@ namespace HospitalMangement
         private void btnDoctorSave_Click(object sender, EventArgs e)
         {
             DataAccess dataaccess = new DataAccess();
-            checkedListBox1.Items.Clear();
-            foreach (string s in checkedListBox1.CheckedItems)
+            var cbval = cbDesignation.SelectedItem;
+            var cbIndex = cbDesignation.SelectedIndex;
+            var cbval1 = cbVisitingTime.SelectedItem;
+            var cbIndex1= cbVisitingTime.SelectedIndex;
+            var cbval2 = cbDoctorDepartment.SelectedItem;
+            var cbIndex2 = cbDoctorDepartment.SelectedIndex;
+            string str = "";
+            if (cblVisitDay.CheckedItems.Count > 0)
             {
-                checkedListBox1.Items.Add(s);
+                for (int i = 0; i < cblVisitDay.CheckedItems.Count; i++)
+                {
+                    if (str == "")
+                    {
+                        str = cblVisitDay.CheckedItems[i].ToString();
+                    }
+                    else
+                    {
+                        str += "," + cblVisitDay.CheckedItems[i].ToString();
+                    }
+                }
+
             }
-            string sql = string.Format("insert into tblDoctorLogin (doctorUserName, updatedTime,UserType) " +
-                 "Values ('{0}','{1}','{2}')", txtDoctorUserName.Text, System.DateTime.Now.ToString(), 1);
+
+            string sql = string.Format("insert into tblDoctorMoreInfo (doctorId,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,doctorDepartment, updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", txtDoctorId.Text,txtDoctorEdu.Text,cbval,cbval1,str,cbval2, System.DateTime.Now.ToString());
 
             SqlCommand command = dataaccess.GetCommand(sql);
 
@@ -248,18 +272,28 @@ namespace HospitalMangement
             command.Connection.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            listBoxItem.Items.Clear();
-            foreach (string s in checkedListBox1.CheckedItems)
-            {
-                listBoxItem.Items.Add(s);
-            }
-        }
+       
 
         private void txtDoctorId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        public void refreshdata()
+        {
+            DataAccess dataaccess = new DataAccess();
+            DataRow dr;
+            string sql = "select * from tblDep";
+            SqlCommand command = dataaccess.GetCommand(sql);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            //DataTable dt = dataaccess.Execute(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dr = dt.NewRow();
+            dr.ItemArray = new Object[] { 0, "--Select Department--" };
+            dt.Rows.InsertAt(dr, 0);
+            cbDoctorDepartment.ValueMember = "depId";
+            cbDoctorDepartment.DisplayMember = "depName";
+            cbDoctorDepartment.DataSource = dt;
         }
     }
 }
