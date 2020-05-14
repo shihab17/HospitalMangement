@@ -58,6 +58,12 @@
     <Compile Include="Blood.Designer.cs">
       <DependentUpon>Blood.cs</DependentUpon>
     </Compile>
+    <Compile Include="BloodHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodHome.Designer.cs">
+      <DependentUpon>BloodHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DataAccess.cs" />
     <Compile Include="DoctorHome.cs">
       <SubType>Form</SubType>
@@ -71,10 +77,17 @@
     <Compile Include="EmployeeHome.Designer.cs">
       <DependentUpon>EmployeeHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BloodMember.cs" />
     <Compile Include="Entities\Doctors.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\MedicalServices.cs" />
     <Compile Include="Entities\Users.cs" />
+    <Compile Include="Forms\BloodMember\ViewBloodMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BloodMember\ViewBloodMember.Designer.cs">
+      <DependentUpon>ViewBloodMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Doctor\ViewDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Blood.resx">
       <DependentUpon>Blood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodHome.resx">
+      <DependentUpon>BloodHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>

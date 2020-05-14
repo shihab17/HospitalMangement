@@ -33,9 +33,9 @@
             this.btnDepartment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnBloodBank = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,15 +90,15 @@
             this.panel2.Size = new System.Drawing.Size(739, 309);
             this.panel2.TabIndex = 4;
             // 
-            // btnEmployee
+            // btnBloodBank
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(154, 23);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployee.TabIndex = 4;
-            this.btnEmployee.Text = "Employee";
-            this.btnEmployee.UseVisualStyleBackColor = true;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            this.btnBloodBank.Location = new System.Drawing.Point(26, 70);
+            this.btnBloodBank.Name = "btnBloodBank";
+            this.btnBloodBank.Size = new System.Drawing.Size(75, 23);
+            this.btnBloodBank.TabIndex = 6;
+            this.btnBloodBank.Text = "BloodBank";
+            this.btnBloodBank.UseVisualStyleBackColor = true;
+            this.btnBloodBank.Click += new System.EventHandler(this.btnBloodBank_Click);
             // 
             // button1
             // 
@@ -110,14 +110,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnBloodBank
+            // btnEmployee
             // 
-            this.btnBloodBank.Location = new System.Drawing.Point(26, 70);
-            this.btnBloodBank.Name = "btnBloodBank";
-            this.btnBloodBank.Size = new System.Drawing.Size(75, 23);
-            this.btnBloodBank.TabIndex = 6;
-            this.btnBloodBank.Text = "BloodBank";
-            this.btnBloodBank.UseVisualStyleBackColor = true;
+            this.btnEmployee.Location = new System.Drawing.Point(154, 23);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(75, 23);
+            this.btnEmployee.TabIndex = 4;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // AdminHome
             // 

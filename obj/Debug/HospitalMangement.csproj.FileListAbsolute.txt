@@ -17,3 +17,4 @@ C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.exe
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.pdb
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Employee.EmployeeProfile.resources
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Blood.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.BloodHome.resources

@@ -55,5 +55,12 @@ namespace HospitalMangement
             member.Show();
             this.Hide();
         }
+
+        private void btnBloodBank_Click(object sender, EventArgs e)
+        {
+            BloodHome b = new BloodHome();
+            b.Show();
+            this.Hide();
+        }
     }
 }
