@@ -17,10 +17,7 @@ namespace HospitalMangement.Forms.Reception
     {
         Form previousForm;
         Users user;
-        public Reception()
-        {
-            InitializeComponent();
-        }
+        
         public Reception(Form _previousForm, Users _user)
         {
             InitializeComponent();
