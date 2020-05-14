@@ -51,9 +51,7 @@ namespace HospitalMangement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Blood member = new Blood();
-            member.Show();
-            this.Hide();
+           
         }
 
         private void btnBloodBank_Click(object sender, EventArgs e)

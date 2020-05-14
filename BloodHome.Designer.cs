@@ -469,6 +469,7 @@
             this.btnViewBloodMember.TabIndex = 34;
             this.btnViewBloodMember.Text = "View BloodMember";
             this.btnViewBloodMember.UseVisualStyleBackColor = true;
+            this.btnViewBloodMember.Click += new System.EventHandler(this.btnViewBloodMember_Click);
             // 
             // BloodHome
             // 

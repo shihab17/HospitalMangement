@@ -1,5 +1,6 @@
 ﻿using HospitalMangement.Database;
 using HospitalMangement.Entities;
+using HospitalMangement.Forms.BloodMember;
 using HospitalMangement.RandomNumberSample;
 using System;
 using System.Data;
@@ -188,5 +189,11 @@ namespace HospitalMangement
             commandd.Connection.Close();
         }
 
+        private void btnViewBloodMember_Click(object sender, EventArgs e)
+        {
+            ViewBloodMember bm = new ViewBloodMember();
+            bm.Show();
+            this.Close();
+        }
     }
 }

@@ -58,8 +58,9 @@ namespace HospitalMangement.Forms.Doctor
             string sql1 = string.Format("Select * FROM tblDoctorGenarelInfo ");
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
-            String query = "UPDATE tblDoctorGenarelInfo SET doctorFirstName= '" + txtDoctorFirstName.Text + "',doctorLastName= '" + txtDoctorLastName.Text + "',doctorFatherName= '" + txtDoctorFatherName.Text + "',doctorMotherName= '" + txtDoctorMotherName.Text + "',doctorAddress= '" + txtDoctorAddress.Text + "',doctorEmail= '" + txtDoctorEmail.Text + "',doctorBG= '" + cbDoctorBloodGroup.Text + "',doctorGender= '" + combogender.Text + "',doctorBirthday= '" + dtpDOB.Text + "',doctorPhoneNumber= '" + txtDoctorPhoneNumber.Text + "' WHERE doctorId ='" + txtDoctorId.Text + "' ";
-
+            //String query = "UPDATE tblDoctorGenarelInfo SET doctorFirstName= '" + txtDoctorFirstName.Text + "',doctorLastName= '" + txtDoctorLastName.Text + "',doctorFatherName= '" + txtDoctorFatherName.Text + "',doctorMotherName= '" + txtDoctorMotherName.Text + "',doctorAddress= '" + txtDoctorAddress.Text + "',doctorEmail= '" + txtDoctorEmail.Text + "',doctorBG= '" + cbDoctorBloodGroup.Text + "',doctorGender= '" + combogender.Text + "',doctorBirthday= '" + dtpDOB.Text + "',doctorPhoneNumber= '" + txtDoctorPhoneNumber.Text + "' WHERE doctorId ='" + txtDoctorId.Text + "' ";
+            string query = string.Format("UPDATE tblDoctorGenarelInfo SET (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbDoctorBloodGroup.Text, combogender.Text, dt, txtDoctorPhoneNumber.Text, System.DateTime.Now.ToString());
             SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
             sda.SelectCommand.ExecuteNonQuery();
 
