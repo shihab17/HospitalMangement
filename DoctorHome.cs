@@ -25,10 +25,10 @@ namespace HospitalMangement
         {
             InitializeComponent();
             panelAddDoctor.Visible = false;
-            
             panelDoctorGenarelInfo.Visible = false;
             refreshdata();
             panelMoreInformation.Visible = false;
+
 
         }
         public DoctorHome(Form _previousForm, Users _user)
@@ -46,6 +46,7 @@ namespace HospitalMangement
             txtDoctorUserName.Text = string.Format("{0}", doctor.doctorUserName);
             txtDoctorPassword.Text = string.Format("{0}", doctor.doctorPassword);
             panelMoreInformation.Visible = true;
+            panelMoreInformation.Enabled = false;
             refreshdata();
         }
 
@@ -67,6 +68,7 @@ namespace HospitalMangement
             
 
             lblDoctorPassword.Enabled = true;
+
             //txtDoctorPassword.Enabled = true;
 
         }
@@ -193,8 +195,8 @@ namespace HospitalMangement
             //      "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text,txtDoctorFirstName.Text,txtDoctorLastName.Text,txtDoctorFatherName.Text,txtDoctorMotherName.Text,txtDoctorAddress.Text,txtDoctorEmail.Text,cbIndex,checkedRB,dt, System.DateTime.Now.ToString());
 
 
-            string sql1 = string.Format("insert into tblDoctorGenarelInfo (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
-                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbval, checkedRB, dt, txtDoctorPhoneNumber.Text, System.DateTime.Now.ToString());
+            string sql1 = string.Format("insert into tblDoctorGenarelInfo (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,doctorUserName,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbval, checkedRB, dt, txtDoctorPhoneNumber.Text,txtDoctorUserName.Text, System.DateTime.Now.ToString());
 
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
@@ -252,8 +254,8 @@ namespace HospitalMangement
 
             }
 
-            string sql = string.Format("insert into tblDoctorMoreInfo (doctorId,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,doctorDepartment, updatedTime) " +
-                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", txtDoctorId.Text,txtDoctorEdu.Text,cbval,cbval1,str,cbval2, System.DateTime.Now.ToString());
+            string sql = string.Format("insert into tblDoctorMoreInfo (doctorId,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,depId,doctorUserName, updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", txtDoctorId.Text,txtDoctorEdu.Text, cbIndex, cbval1,str, cbIndex2, txtDoctorUserName.Text ,System.DateTime.Now.ToString());
 
             SqlCommand command = dataaccess.GetCommand(sql);
 
@@ -270,9 +272,61 @@ namespace HospitalMangement
             else { MessageBox.Show("Something went wrong"); }
 
             command.Connection.Close();
+            //doctorInsertAll();
         }
-
        
+       public void doctorInsertAll()
+        {
+            DataAccess dataaccess = new DataAccess();
+            DateTime dt = dtpDOB.Value;
+            var cbval = cbDoctorBloodGroup.SelectedItem;
+            var cbIndex = cbDoctorBloodGroup.SelectedIndex;
+            string checkedRB;
+            if (rbMale.Checked)
+            {
+                checkedRB = "Male";
+            }
+            else
+            {
+                checkedRB = "Female";
+            }
+            var cbval3 = cbDesignation.SelectedItem;
+            var cbIndex3 = cbDesignation.SelectedIndex;
+            var cbval1 = cbVisitingTime.SelectedItem;
+            var cbIndex1 = cbVisitingTime.SelectedIndex;
+            var cbval2 = cbDoctorDepartment.SelectedItem;
+            var cbIndex2 = cbDoctorDepartment.SelectedIndex;
+            string str = "";
+            if (cblVisitDay.CheckedItems.Count > 0)
+            {
+                for (int i = 0; i < cblVisitDay.CheckedItems.Count; i++)
+                {
+                    if (str == "")
+                    {
+                        str = cblVisitDay.CheckedItems[i].ToString();
+                    }
+                    else
+                    {
+                        str += "," + cblVisitDay.CheckedItems[i].ToString();
+                    }
+                }
+
+            }
+            string sql1 = string.Format("insert into tblDoctor (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,depId,updatedTime) " +
+               "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}''{12}','{13}','{14}','{15}','{16}','{17}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbval, checkedRB, dt, txtDoctorPhoneNumber.Text, txtDoctorEdu.Text, cbIndex3, cbval1, str, cbIndex2, System.DateTime.Now.ToString());
+
+            SqlCommand commandd = dataaccess.GetCommand(sql1);
+            commandd.Connection.Open();
+            int rowsAffected = commandd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Insert All Information Successfully!!");
+
+            }
+            else { MessageBox.Show("Something went wrong"); }
+            commandd.Connection.Close();
+
+        }
 
         private void txtDoctorId_TextChanged(object sender, EventArgs e)
         {
