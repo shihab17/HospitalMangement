@@ -4,6 +4,9 @@ C:\Users\pranto\Desktop\HospitalMangement\bin\Debug\HospitalMangement.pdb
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.csprojAssemblyReference.cache
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.AdminHome.resources
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.DoctorHome.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.EmployeeHome.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Doctor.ViewDoctor.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Employee.ViewEmployee.resources
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Management.Departments.resources
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Management.btnManagement.resources
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.loginForm.resources
@@ -12,6 +15,6 @@ C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.csproj.Gen
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.csproj.CoreCompileInputs.cache
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.exe
 C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.pdb
-C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Doctor.ViewDoctor.resources
-C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.EmployeeHome.resources
-C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Employee.ViewEmployee.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Forms.Employee.EmployeeProfile.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.Blood.resources
+C:\Users\pranto\Desktop\HospitalMangement\obj\Debug\HospitalMangement.BloodHome.resources

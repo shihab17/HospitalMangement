@@ -1,7 +1,9 @@
 ﻿using HospitalMangement.Database;
 using HospitalMangement.Entities;
+
 using HospitalMangement.Forms.Doctor;
 using HospitalMangement.Forms.Reception;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,12 +74,14 @@ namespace HospitalMangement
                 {
                     int id = Convert.ToInt32(dt.Rows[0][0].ToString());
                     int ut= (int)Entities.Users.UserTypeEnum.Doctor;
+
                     Users usr= new Users(id, txtUserName.Text, txtPassword.Text, ut);
 
                     Doctor doctor = new Doctor(this,usr);
                     doctor.Show();
                     this.Hide();
                 }
+
 
                 if (userType == (int)Entities.Users.UserTypeEnum.Reception)
                 {
@@ -87,6 +91,7 @@ namespace HospitalMangement
 
                     Reception reciption = new Reception(this, usr);
                     reciption.Show();
+
                     this.Hide();
                 }
             }

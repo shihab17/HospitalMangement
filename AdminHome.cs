@@ -48,5 +48,17 @@ namespace HospitalMangement
             employee.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnBloodBank_Click(object sender, EventArgs e)
+        {
+            BloodHome b = new BloodHome();
+            b.Show();
+            this.Hide();
+        }
     }
 }

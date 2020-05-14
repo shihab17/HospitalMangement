@@ -52,6 +52,18 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blood.Designer.cs">
+      <DependentUpon>Blood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BloodHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BloodHome.Designer.cs">
+      <DependentUpon>BloodHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DataAccess.cs" />
     <Compile Include="DoctorHome.cs">
       <SubType>Form</SubType>
@@ -65,16 +77,30 @@
     <Compile Include="EmployeeHome.Designer.cs">
       <DependentUpon>EmployeeHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\BloodMember.cs" />
     <Compile Include="Entities\Doctors.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\MedicalServices.cs" />
     <Compile Include="Entities\Users.cs" />
+    <Compile Include="Forms\BloodMember\ViewBloodMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BloodMember\ViewBloodMember.Designer.cs">
+      <DependentUpon>ViewBloodMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Doctor\ViewDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Doctor\ViewDoctor.Designer.cs">
       <DependentUpon>ViewDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employee\EmployeeProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeProfile.Designer.cs">
+      <DependentUpon>EmployeeProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\User.cs" />
     <Compile Include="Forms\Employee\ViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +132,12 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Blood.resx">
+      <DependentUpon>Blood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BloodHome.resx">
+      <DependentUpon>BloodHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorHome.resx">
       <DependentUpon>DoctorHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\ViewDoctor.resx">
       <DependentUpon>ViewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\EmployeeProfile.resx">
+      <DependentUpon>EmployeeProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Employee\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>

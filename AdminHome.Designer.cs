@@ -33,6 +33,8 @@
             this.btnDepartment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBloodBank = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,10 +51,9 @@
             // 
             // btnManagement
             // 
-
-            this.btnManagement.Location = new System.Drawing.Point(424, 14);
-
+            this.btnManagement.Location = new System.Drawing.Point(288, 23);
             this.btnManagement.Name = "btnManagement";
+            this.btnManagement.Size = new System.Drawing.Size(75, 23);
             this.btnManagement.TabIndex = 1;
             this.btnManagement.Text = "Management";
             this.btnManagement.UseVisualStyleBackColor = true;
@@ -60,10 +61,9 @@
             // 
             // btnDepartment
             // 
-
-            this.btnDepartment.Location = new System.Drawing.Point(557, 23);
+            this.btnDepartment.Location = new System.Drawing.Point(425, 23);
             this.btnDepartment.Name = "btnDepartment";
-           
+            this.btnDepartment.Size = new System.Drawing.Size(75, 23);
             this.btnDepartment.TabIndex = 2;
             this.btnDepartment.Text = "Department";
             this.btnDepartment.UseVisualStyleBackColor = true;
@@ -78,6 +78,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnBloodBank);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnEmployee);
             this.panel2.Controls.Add(this.btnManagement);
             this.panel2.Controls.Add(this.btnDoctor);
@@ -88,9 +90,29 @@
             this.panel2.Size = new System.Drawing.Size(739, 309);
             this.panel2.TabIndex = 4;
             // 
+            // btnBloodBank
+            // 
+            this.btnBloodBank.Location = new System.Drawing.Point(26, 70);
+            this.btnBloodBank.Name = "btnBloodBank";
+            this.btnBloodBank.Size = new System.Drawing.Size(75, 23);
+            this.btnBloodBank.TabIndex = 6;
+            this.btnBloodBank.Text = "BloodBank";
+            this.btnBloodBank.UseVisualStyleBackColor = true;
+            this.btnBloodBank.Click += new System.EventHandler(this.btnBloodBank_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(556, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "none";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(303, 23);
+            this.btnEmployee.Location = new System.Drawing.Point(154, 23);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(75, 23);
             this.btnEmployee.TabIndex = 4;
@@ -102,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(825, 463);
             this.Controls.Add(this.panel2);
             this.Name = "AdminHome";
             this.Text = "AdminHome";
@@ -119,5 +141,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnBloodBank;
+        private System.Windows.Forms.Button button1;
     }
 }
