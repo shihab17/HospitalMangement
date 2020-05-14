@@ -52,12 +52,6 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Blood.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Blood.Designer.cs">
-      <DependentUpon>Blood.cs</DependentUpon>
-    </Compile>
     <Compile Include="BloodHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +81,12 @@
     </Compile>
     <Compile Include="Forms\BloodMember\ViewBloodMember.Designer.cs">
       <DependentUpon>ViewBloodMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doctor\Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctor\Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Doctor\ViewDoctor.cs">
       <SubType>Form</SubType>
@@ -119,6 +119,12 @@
     <Compile Include="Forms\Management\Management.Designer.cs">
       <DependentUpon>Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reception.Designer.cs">
+      <DependentUpon>Reception.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Instance.cs" />
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
@@ -132,9 +138,6 @@
     <EmbeddedResource Include="AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Blood.resx">
-      <DependentUpon>Blood.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BloodHome.resx">
       <DependentUpon>BloodHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeHome.resx">
       <DependentUpon>EmployeeHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doctor\Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\ViewDoctor.resx">
       <DependentUpon>ViewDoctor.cs</DependentUpon>

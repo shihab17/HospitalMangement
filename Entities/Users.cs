@@ -13,7 +13,7 @@ namespace HospitalMangement.Entities
             Admin,
             Doctor,
             Employee,
-            BloodMemberId,
+            BloodMember,
             Reception
         };
         public int Id { get;set;}
