@@ -33,6 +33,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.panelEmployeeGenarelInfo = new System.Windows.Forms.Panel();
+            this.cbEmployeeProfessionName = new System.Windows.Forms.ComboBox();
+            this.lblEmployeeProfessionName = new System.Windows.Forms.Label();
             this.cbEmployeeBloodGroup = new System.Windows.Forms.ComboBox();
             this.txtEmployeePhoneNumber = new System.Windows.Forms.TextBox();
             this.lblDoctorPhoneNumber = new System.Windows.Forms.Label();
@@ -57,6 +59,8 @@
             this.lblDoctorLastName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelAddEmployee = new System.Windows.Forms.Panel();
+            this.cblblEmployeeUserType = new System.Windows.Forms.ComboBox();
+            this.lblEmployeeUserType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmployeeUserName = new System.Windows.Forms.TextBox();
             this.txtEmployeePassword = new System.Windows.Forms.TextBox();
@@ -82,7 +86,7 @@
             // lblDoctorBloodGroup
             // 
             this.lblDoctorBloodGroup.AutoSize = true;
-            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 243);
+            this.lblDoctorBloodGroup.Location = new System.Drawing.Point(7, 197);
             this.lblDoctorBloodGroup.Name = "lblDoctorBloodGroup";
             this.lblDoctorBloodGroup.Size = new System.Drawing.Size(66, 13);
             this.lblDoctorBloodGroup.TabIndex = 22;
@@ -90,7 +94,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(266, 13);
+            this.btnAdd.Location = new System.Drawing.Point(297, 33);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(54, 23);
             this.btnAdd.TabIndex = 4;
@@ -100,7 +104,7 @@
             // 
             // txtEmployeeAddress
             // 
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(91, 174);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(91, 142);
             this.txtEmployeeAddress.Multiline = true;
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
             this.txtEmployeeAddress.Size = new System.Drawing.Size(200, 20);
@@ -109,6 +113,8 @@
             // panelEmployeeGenarelInfo
             // 
             this.panelEmployeeGenarelInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelEmployeeGenarelInfo.Controls.Add(this.cbEmployeeProfessionName);
+            this.panelEmployeeGenarelInfo.Controls.Add(this.lblEmployeeProfessionName);
             this.panelEmployeeGenarelInfo.Controls.Add(this.cbEmployeeBloodGroup);
             this.panelEmployeeGenarelInfo.Controls.Add(this.lblDoctorBloodGroup);
             this.panelEmployeeGenarelInfo.Controls.Add(this.txtEmployeePhoneNumber);
@@ -133,10 +139,32 @@
             this.panelEmployeeGenarelInfo.Controls.Add(this.txtEmployeeId);
             this.panelEmployeeGenarelInfo.Controls.Add(this.txtEmployeeLastName);
             this.panelEmployeeGenarelInfo.Controls.Add(this.lblDoctorLastName);
-            this.panelEmployeeGenarelInfo.Location = new System.Drawing.Point(9, 86);
+            this.panelEmployeeGenarelInfo.Location = new System.Drawing.Point(9, 116);
             this.panelEmployeeGenarelInfo.Name = "panelEmployeeGenarelInfo";
             this.panelEmployeeGenarelInfo.Size = new System.Drawing.Size(357, 421);
             this.panelEmployeeGenarelInfo.TabIndex = 20;
+            // 
+            // cbEmployeeProfessionName
+            // 
+            this.cbEmployeeProfessionName.FormattingEnabled = true;
+            this.cbEmployeeProfessionName.Items.AddRange(new object[] {
+            "Dr Assistance(2)",
+            "Reception(3)",
+            "Nourse(4)",
+            "Electrochian(5)"});
+            this.cbEmployeeProfessionName.Location = new System.Drawing.Point(92, 318);
+            this.cbEmployeeProfessionName.Name = "cbEmployeeProfessionName";
+            this.cbEmployeeProfessionName.Size = new System.Drawing.Size(202, 21);
+            this.cbEmployeeProfessionName.TabIndex = 25;
+            // 
+            // lblEmployeeProfessionName
+            // 
+            this.lblEmployeeProfessionName.AutoSize = true;
+            this.lblEmployeeProfessionName.Location = new System.Drawing.Point(0, 326);
+            this.lblEmployeeProfessionName.Name = "lblEmployeeProfessionName";
+            this.lblEmployeeProfessionName.Size = new System.Drawing.Size(87, 13);
+            this.lblEmployeeProfessionName.TabIndex = 24;
+            this.lblEmployeeProfessionName.Text = "Profession Name";
             // 
             // cbEmployeeBloodGroup
             // 
@@ -150,14 +178,14 @@
             "AB-",
             "O+",
             "O-"});
-            this.cbEmployeeBloodGroup.Location = new System.Drawing.Point(91, 240);
+            this.cbEmployeeBloodGroup.Location = new System.Drawing.Point(91, 194);
             this.cbEmployeeBloodGroup.Name = "cbEmployeeBloodGroup";
             this.cbEmployeeBloodGroup.Size = new System.Drawing.Size(200, 21);
             this.cbEmployeeBloodGroup.TabIndex = 23;
             // 
             // txtEmployeePhoneNumber
             // 
-            this.txtEmployeePhoneNumber.Location = new System.Drawing.Point(91, 330);
+            this.txtEmployeePhoneNumber.Location = new System.Drawing.Point(92, 291);
             this.txtEmployeePhoneNumber.Name = "txtEmployeePhoneNumber";
             this.txtEmployeePhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeePhoneNumber.TabIndex = 21;
@@ -165,7 +193,7 @@
             // lblDoctorPhoneNumber
             // 
             this.lblDoctorPhoneNumber.AutoSize = true;
-            this.lblDoctorPhoneNumber.Location = new System.Drawing.Point(7, 333);
+            this.lblDoctorPhoneNumber.Location = new System.Drawing.Point(8, 294);
             this.lblDoctorPhoneNumber.Name = "lblDoctorPhoneNumber";
             this.lblDoctorPhoneNumber.Size = new System.Drawing.Size(78, 13);
             this.lblDoctorPhoneNumber.TabIndex = 20;
@@ -173,7 +201,7 @@
             // 
             // dtpDOB
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(91, 295);
+            this.dtpDOB.Location = new System.Drawing.Point(96, 256);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(200, 20);
             this.dtpDOB.TabIndex = 19;
@@ -181,7 +209,7 @@
             // lblDoctorBirthday
             // 
             this.lblDoctorBirthday.AutoSize = true;
-            this.lblDoctorBirthday.Location = new System.Drawing.Point(7, 301);
+            this.lblDoctorBirthday.Location = new System.Drawing.Point(12, 262);
             this.lblDoctorBirthday.Name = "lblDoctorBirthday";
             this.lblDoctorBirthday.Size = new System.Drawing.Size(45, 13);
             this.lblDoctorBirthday.TabIndex = 18;
@@ -190,7 +218,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(169, 264);
+            this.rbFemale.Location = new System.Drawing.Point(170, 228);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(59, 17);
             this.rbFemale.TabIndex = 17;
@@ -201,7 +229,7 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(91, 264);
+            this.rbMale.Location = new System.Drawing.Point(92, 228);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
             this.rbMale.TabIndex = 16;
@@ -212,7 +240,7 @@
             // lblDoctorGender
             // 
             this.lblDoctorGender.AutoSize = true;
-            this.lblDoctorGender.Location = new System.Drawing.Point(7, 268);
+            this.lblDoctorGender.Location = new System.Drawing.Point(8, 232);
             this.lblDoctorGender.Name = "lblDoctorGender";
             this.lblDoctorGender.Size = new System.Drawing.Size(42, 13);
             this.lblDoctorGender.TabIndex = 15;
@@ -221,7 +249,7 @@
             // lblDoctorEmailAddress
             // 
             this.lblDoctorEmailAddress.AutoSize = true;
-            this.lblDoctorEmailAddress.Location = new System.Drawing.Point(7, 212);
+            this.lblDoctorEmailAddress.Location = new System.Drawing.Point(7, 175);
             this.lblDoctorEmailAddress.Name = "lblDoctorEmailAddress";
             this.lblDoctorEmailAddress.Size = new System.Drawing.Size(32, 13);
             this.lblDoctorEmailAddress.TabIndex = 13;
@@ -229,7 +257,7 @@
             // 
             // txtEmployeeEmail
             // 
-            this.txtEmployeeEmail.Location = new System.Drawing.Point(91, 205);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(91, 168);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeeEmail.TabIndex = 12;
@@ -237,7 +265,7 @@
             // lblDoctorAddress
             // 
             this.lblDoctorAddress.AutoSize = true;
-            this.lblDoctorAddress.Location = new System.Drawing.Point(7, 177);
+            this.lblDoctorAddress.Location = new System.Drawing.Point(7, 145);
             this.lblDoctorAddress.Name = "lblDoctorAddress";
             this.lblDoctorAddress.Size = new System.Drawing.Size(45, 13);
             this.lblDoctorAddress.TabIndex = 14;
@@ -246,7 +274,7 @@
             // lblDoctorMotherName
             // 
             this.lblDoctorMotherName.AutoSize = true;
-            this.lblDoctorMotherName.Location = new System.Drawing.Point(7, 145);
+            this.lblDoctorMotherName.Location = new System.Drawing.Point(7, 119);
             this.lblDoctorMotherName.Name = "lblDoctorMotherName";
             this.lblDoctorMotherName.Size = new System.Drawing.Size(71, 13);
             this.lblDoctorMotherName.TabIndex = 9;
@@ -254,14 +282,14 @@
             // 
             // txtEmployeeFatherName
             // 
-            this.txtEmployeeFatherName.Location = new System.Drawing.Point(91, 111);
+            this.txtEmployeeFatherName.Location = new System.Drawing.Point(91, 90);
             this.txtEmployeeFatherName.Name = "txtEmployeeFatherName";
             this.txtEmployeeFatherName.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeeFatherName.TabIndex = 7;
             // 
             // txtEmployeeMotherName
             // 
-            this.txtEmployeeMotherName.Location = new System.Drawing.Point(91, 142);
+            this.txtEmployeeMotherName.Location = new System.Drawing.Point(91, 116);
             this.txtEmployeeMotherName.Name = "txtEmployeeMotherName";
             this.txtEmployeeMotherName.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeeMotherName.TabIndex = 8;
@@ -269,7 +297,7 @@
             // lblDoctorFatherName
             // 
             this.lblDoctorFatherName.AutoSize = true;
-            this.lblDoctorFatherName.Location = new System.Drawing.Point(7, 114);
+            this.lblDoctorFatherName.Location = new System.Drawing.Point(7, 93);
             this.lblDoctorFatherName.Name = "lblDoctorFatherName";
             this.lblDoctorFatherName.Size = new System.Drawing.Size(68, 13);
             this.lblDoctorFatherName.TabIndex = 10;
@@ -288,7 +316,7 @@
             // lblDoctorFirstName
             // 
             this.lblDoctorFirstName.AutoSize = true;
-            this.lblDoctorFirstName.Location = new System.Drawing.Point(7, 51);
+            this.lblDoctorFirstName.Location = new System.Drawing.Point(7, 41);
             this.lblDoctorFirstName.Name = "lblDoctorFirstName";
             this.lblDoctorFirstName.Size = new System.Drawing.Size(57, 13);
             this.lblDoctorFirstName.TabIndex = 2;
@@ -296,7 +324,7 @@
             // 
             // txtEmployeeFirstName
             // 
-            this.txtEmployeeFirstName.Location = new System.Drawing.Point(91, 48);
+            this.txtEmployeeFirstName.Location = new System.Drawing.Point(91, 38);
             this.txtEmployeeFirstName.Name = "txtEmployeeFirstName";
             this.txtEmployeeFirstName.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeeFirstName.TabIndex = 0;
@@ -321,7 +349,7 @@
             // 
             // txtEmployeeLastName
             // 
-            this.txtEmployeeLastName.Location = new System.Drawing.Point(91, 80);
+            this.txtEmployeeLastName.Location = new System.Drawing.Point(91, 64);
             this.txtEmployeeLastName.Name = "txtEmployeeLastName";
             this.txtEmployeeLastName.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeeLastName.TabIndex = 1;
@@ -329,7 +357,7 @@
             // lblDoctorLastName
             // 
             this.lblDoctorLastName.AutoSize = true;
-            this.lblDoctorLastName.Location = new System.Drawing.Point(7, 83);
+            this.lblDoctorLastName.Location = new System.Drawing.Point(7, 67);
             this.lblDoctorLastName.Name = "lblDoctorLastName";
             this.lblDoctorLastName.Size = new System.Drawing.Size(58, 13);
             this.lblDoctorLastName.TabIndex = 3;
@@ -341,7 +369,7 @@
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(226, 86);
+            this.label2.Location = new System.Drawing.Point(196, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(441, 31);
             this.label2.TabIndex = 8;
@@ -350,6 +378,8 @@
             // panelAddEmployee
             // 
             this.panelAddEmployee.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelAddEmployee.Controls.Add(this.cblblEmployeeUserType);
+            this.panelAddEmployee.Controls.Add(this.lblEmployeeUserType);
             this.panelAddEmployee.Controls.Add(this.label1);
             this.panelAddEmployee.Controls.Add(this.txtEmployeeUserName);
             this.panelAddEmployee.Controls.Add(this.btnAdd);
@@ -357,8 +387,30 @@
             this.panelAddEmployee.Controls.Add(this.lblEmployeePassword);
             this.panelAddEmployee.Location = new System.Drawing.Point(3, 17);
             this.panelAddEmployee.Name = "panelAddEmployee";
-            this.panelAddEmployee.Size = new System.Drawing.Size(357, 56);
+            this.panelAddEmployee.Size = new System.Drawing.Size(363, 90);
             this.panelAddEmployee.TabIndex = 19;
+            // 
+            // cblblEmployeeUserType
+            // 
+            this.cblblEmployeeUserType.FormattingEnabled = true;
+            this.cblblEmployeeUserType.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cblblEmployeeUserType.Location = new System.Drawing.Point(82, 32);
+            this.cblblEmployeeUserType.Name = "cblblEmployeeUserType";
+            this.cblblEmployeeUserType.Size = new System.Drawing.Size(168, 21);
+            this.cblblEmployeeUserType.TabIndex = 29;
+            // 
+            // lblEmployeeUserType
+            // 
+            this.lblEmployeeUserType.AutoSize = true;
+            this.lblEmployeeUserType.Location = new System.Drawing.Point(8, 36);
+            this.lblEmployeeUserType.Name = "lblEmployeeUserType";
+            this.lblEmployeeUserType.Size = new System.Drawing.Size(53, 13);
+            this.lblEmployeeUserType.TabIndex = 28;
+            this.lblEmployeeUserType.Text = "UserType";
             // 
             // label1
             // 
@@ -378,7 +430,7 @@
             // 
             // txtEmployeePassword
             // 
-            this.txtEmployeePassword.Location = new System.Drawing.Point(82, 34);
+            this.txtEmployeePassword.Location = new System.Drawing.Point(82, 59);
             this.txtEmployeePassword.Name = "txtEmployeePassword";
             this.txtEmployeePassword.Size = new System.Drawing.Size(168, 20);
             this.txtEmployeePassword.TabIndex = 1;
@@ -386,7 +438,7 @@
             // lblEmployeePassword
             // 
             this.lblEmployeePassword.AutoSize = true;
-            this.lblEmployeePassword.Location = new System.Drawing.Point(3, 34);
+            this.lblEmployeePassword.Location = new System.Drawing.Point(3, 59);
             this.lblEmployeePassword.Name = "lblEmployeePassword";
             this.lblEmployeePassword.Size = new System.Drawing.Size(53, 13);
             this.lblEmployeePassword.TabIndex = 3;
@@ -399,8 +451,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(48, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(532, 510);
+            this.panel1.Size = new System.Drawing.Size(742, 540);
             this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -426,7 +479,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 556);
+            this.ClientSize = new System.Drawing.Size(998, 603);
             this.Controls.Add(this.btnViewEmployee);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -481,5 +534,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cbEmployeeProfessionName;
+        private System.Windows.Forms.Label lblEmployeeProfessionName;
+        private System.Windows.Forms.ComboBox cblblEmployeeUserType;
+        private System.Windows.Forms.Label lblEmployeeUserType;
     }
 }

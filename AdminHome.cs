@@ -48,5 +48,12 @@ namespace HospitalMangement
             employee.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Blood member = new Blood();
+            member.Show();
+            this.Hide();
+        }
     }
 }

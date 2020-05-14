@@ -84,7 +84,7 @@ namespace HospitalMangement
             string pass = generator.RandomPassword();
             txtEmployeePassword.Text = pass;
             string sql1 = string.Format("insert into tblLogin (userName,password,updatedTime,UserType) " +
-                 "Values ('{0}','{1}','{2}','{3}')", txtEmployeeUserName.Text, pass, System.DateTime.Now.ToString(), 2);
+                 "Values ('{0}','{1}','{2}','{3}')", txtEmployeeUserName.Text, pass, System.DateTime.Now.ToString(), cblblEmployeeUserType.Text);
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
             int rowsAffected = commandd.ExecuteNonQuery();
@@ -102,7 +102,7 @@ namespace HospitalMangement
             DataAccess dataaccess = new DataAccess();
 
             string sql = string.Format("insert into tblemployeeLogin (employeeUserName, updatedTime,UserType) " +
-                 "Values ('{0}','{1}','{2}')", txtEmployeeUserName.Text, System.DateTime.Now.ToString(), 2);
+                 "Values ('{0}','{1}','{2}')", txtEmployeeUserName.Text, System.DateTime.Now.ToString(), cblblEmployeeUserType.Text);
 
             SqlCommand command = dataaccess.GetCommand(sql);
 
@@ -164,8 +164,8 @@ namespace HospitalMangement
             }
 
             
-            string sql1 = string.Format("insert into tblemployeeGenarelInfo (employeeId,employeeFirstName,employeeLastName,employeeFatherName,employeeMotherName,employeeAddress,employeeEmail,employeeBG,employeeGender,employeeBirthday,employeePhoneNumber,updatedTime) " +
-                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtEmployeeId.Text, txtEmployeeFirstName.Text, txtEmployeeLastName.Text, txtEmployeeFatherName.Text, txtEmployeeMotherName.Text, txtEmployeeAddress.Text, txtEmployeeEmail.Text, cbval, checkedRB, dt, txtEmployeePhoneNumber.Text, System.DateTime.Now.ToString());
+            string sql1 = string.Format("insert into tblemployeeGenarelInfo (employeeId,employeeFirstName,employeeLastName,employeeFatherName,employeeMotherName,employeeAddress,employeeEmail,employeeBG,employeeGender,employeeBirthday,employeePhoneNumber,employeeProfessionName,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", txtEmployeeId.Text, txtEmployeeFirstName.Text, txtEmployeeLastName.Text, txtEmployeeFatherName.Text, txtEmployeeMotherName.Text, txtEmployeeAddress.Text, txtEmployeeEmail.Text, cbval, checkedRB, dt, txtEmployeePhoneNumber.Text, cbEmployeeProfessionName.Text, System.DateTime.Now.ToString());
 
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
@@ -191,6 +191,11 @@ namespace HospitalMangement
             AdminHome ah = new AdminHome();
             ah.Show();
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

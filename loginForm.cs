@@ -1,5 +1,6 @@
 ﻿using HospitalMangement.Database;
 using HospitalMangement.Entities;
+using HospitalMangement.Forms.Employee;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,10 +71,31 @@ namespace HospitalMangement
                 {
                     int id = Convert.ToInt32(dt.Rows[0][0].ToString());
                     int ut= (int)Entities.Users.UserTypeEnum.Doctor;
+
                     Users usr= new Users(id, txtUserName.Text, txtPassword.Text, ut);
 
                     DoctorHome doctor = new DoctorHome(this,usr);
                     doctor.Show();
+                    this.Hide();
+                }
+                if (userType == (int)Entities.Users.UserTypeEnum.Employee)
+                {
+                    int id = Convert.ToInt32(dt.Rows[0][0].ToString());
+                    int ut = (int)Entities.Users.UserTypeEnum.Employee;
+
+
+
+                    Users usr = new Users(id, txtUserName.Text, txtPassword.Text, ut);
+                    EmployeeHome employee = new EmployeeHome(this, usr);
+
+                    //string _userName = dt.Rows[0][1].ToString();
+                    //string _password = dt.Rows[0][2].ToString();
+                    //Users usr = new Users(id, _userName, _password, ut);
+                    //EmployeeProfile employee = new EmployeeProfile(this, usr);
+
+
+
+                    employee.Show();
                     this.Hide();
                 }
             }
