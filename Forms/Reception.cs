@@ -70,7 +70,7 @@ namespace HospitalMangement.Forms.Reception
             cbDepartment.DisplayMember = "depName";
             cbDepartment.DataSource = dt;
         }
-        private void cbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (cbDepartment.SelectedValue.ToString() != null)
             {
@@ -79,6 +79,7 @@ namespace HospitalMangement.Forms.Reception
                 refreshlab(depId);
             }
         }
+
         public void refreshdataDoctorName(int depId)
         {
             DataAccess dataaccess = new DataAccess();
@@ -116,5 +117,7 @@ namespace HospitalMangement.Forms.Reception
             cbDepartment.DisplayMember = "labRoom";
             cbDepartment.DataSource = dt;
         }
+
+        
     }
 }
