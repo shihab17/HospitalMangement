@@ -38,16 +38,18 @@ namespace HospitalMangement.Forms.Employee
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+           
             DataAccess dataaccess = new DataAccess();
-
-            string sql1 = string.Format("Select * FROM tblemployeeGenarelInfo ");
+            DateTime dt = dtpDOB.Value;
+            string sql1 = string.Format("Select * FROM tblemployeeGenarelInfo  ");
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
-            String query = "UPDATE tblDoctorGenarelInfo SET tblemployeeGenarelInfo= '" + txtEmployeeFirstName.Text + "',doctorLastName= '" + txtEmployeeLastName.Text + "',doctorFatherName= '" + txtEmployeeFatherName.Text + "',doctorMotherName= '" + txtEmployeeMotherName.Text + "',doctorAddress= '" + txtEmployeeAddress.Text + "',doctorEmail= '" + txtEmployeeEmail.Text + "',doctorBG= '" + cbEmployeeBloodGroup.Text + "',doctorGender= '" + combogender.Text + "',doctorBirthday= '" + dtpDOB.Text + "',doctorPhoneNumber= '" + txtEmployeePhoneNumber.Text + "' WHERE doctorId ='" + txtEmployeeId.Text + "' ";
-
-            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+            String query = "UPDATE tblemployeeGenarelInfo SET employeeFirstName= '" + txtEmployeeFirstName.Text + "',employeeLastName= '" + txtEmployeeLastName.Text + "',employeeFatherName= '" + txtEmployeeFatherName.Text + "',employeeMotherName= '" + txtEmployeeMotherName.Text + "',employeeAddress= '" + txtEmployeeAddress.Text + "',employeeEmail= '" + txtEmployeeEmail.Text + "',employeeBG= '" + cbEmployeeBloodGroup.Text + "',employeeGender= '" + combogender.Text + "',employeeBirthday= '" + dt + "',employeePhoneNumber= '" + txtEmployeePhoneNumber.Text + "',employeeProfessionName= '" + txtEmployeeProfessionName.Text + "' WHERE employeeId ='" + txtEmployeeId.Text + "' "; 
+             // string query = string.Format("UPDATE tblDoctorGenarelInfo SET (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,updatedTime) " +
+             //   "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbDoctorBloodGroup.Text, combogender.Text, dt, txtDoctorPhoneNumber.Text, System.DateTime.Now.ToString());
+             SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
             sda.SelectCommand.ExecuteNonQuery();
-
+            MessageBox.Show("Updated");
 
             commandd.Connection.Close();
         }
@@ -89,6 +91,14 @@ namespace HospitalMangement.Forms.Employee
             combogender.Text = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
             dtpDOB.Text = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
             txtEmployeePhoneNumber.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            EmployeeHome emp = new EmployeeHome();
+            emp.Show();
+            this.Close();
+
         }
     }
 }

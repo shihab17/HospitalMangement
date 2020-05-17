@@ -57,6 +57,9 @@
             this.txtEmployeeFirstName = new System.Windows.Forms.TextBox();
             this.txtEmployeeLastName = new System.Windows.Forms.TextBox();
             this.lblDoctorLastName = new System.Windows.Forms.Label();
+            this.txtEmployeeProfessionName = new System.Windows.Forms.TextBox();
+            this.lblEmployeeProfessionName = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -333,11 +336,40 @@
             this.lblDoctorLastName.TabIndex = 94;
             this.lblDoctorLastName.Text = "Last Name";
             // 
+            // txtEmployeeProfessionName
+            // 
+            this.txtEmployeeProfessionName.Location = new System.Drawing.Point(102, 431);
+            this.txtEmployeeProfessionName.Name = "txtEmployeeProfessionName";
+            this.txtEmployeeProfessionName.Size = new System.Drawing.Size(200, 20);
+            this.txtEmployeeProfessionName.TabIndex = 121;
+            // 
+            // lblEmployeeProfessionName
+            // 
+            this.lblEmployeeProfessionName.AutoSize = true;
+            this.lblEmployeeProfessionName.Location = new System.Drawing.Point(18, 434);
+            this.lblEmployeeProfessionName.Name = "lblEmployeeProfessionName";
+            this.lblEmployeeProfessionName.Size = new System.Drawing.Size(87, 13);
+            this.lblEmployeeProfessionName.TabIndex = 120;
+            this.lblEmployeeProfessionName.Text = "Profession Name";
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(894, 486);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(95, 49);
+            this.buttonBack.TabIndex = 122;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // ViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 602);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.txtEmployeeProfessionName);
+            this.Controls.Add(this.lblEmployeeProfessionName);
             this.Controls.Add(this.comboBoxOption);
             this.Controls.Add(this.textBoxSharch);
             this.Controls.Add(this.label2);
@@ -406,5 +438,8 @@
         private System.Windows.Forms.TextBox txtEmployeeFirstName;
         private System.Windows.Forms.TextBox txtEmployeeLastName;
         private System.Windows.Forms.Label lblDoctorLastName;
+        private System.Windows.Forms.TextBox txtEmployeeProfessionName;
+        private System.Windows.Forms.Label lblEmployeeProfessionName;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

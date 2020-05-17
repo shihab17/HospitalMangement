@@ -51,7 +51,9 @@ namespace HospitalMangement
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            loginForm lgin = new loginForm();
+            lgin.Show();
+            this.Close();
         }
 
         private void btnBloodBank_Click(object sender, EventArgs e)

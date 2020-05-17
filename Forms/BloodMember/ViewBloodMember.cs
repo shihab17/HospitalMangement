@@ -68,5 +68,28 @@ namespace HospitalMangement.Forms.BloodMember
             commandd.Connection.Close();
             MessageBox.Show("Delete successfully!!!!");
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            BloodHome bh = new BloodHome();
+            bh.Show();
+            this.Show();
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            DataAccess dataaccess = new DataAccess();
+            DateTime dt = dtpDOB.Value;
+            string sql1 = string.Format("Select * FROM tblBloodMemberGenarelInfo ");
+            SqlCommand commandd = dataaccess.GetCommand(sql1);
+            commandd.Connection.Open();
+            String query = "UPDATE tblBloodMemberGenarelInfo SET bloodMemberFirstName= '" + txtBloodMemberFirstName.Text + "',bloodMemberLastName= '" + txtBloodMemberLastName.Text + "',bloodMemberFatherName= '" + txtBloodMemberFatherName.Text + "',bloodMemberMotherName= '" + txtBloodMemberMotherName.Text + "',bloodMemberAddress= '" + txtBloodMemberAddress.Text + "',bloodMemberEmail= '" + txtBloodMemberEmail.Text + "',bloodMemberBG= '" + cbBloodMemberBloodGroup.Text + "',bloodMemberGender= '" + combogender.Text + "',bloodMemberBirthday= '" + dt + "',bloodMemberPhoneNumber= '" + txtBloodMemberPhoneNumber.Text + "',bloodMemberOption= '" + cbMemberOption.Text + "',bloodMemberAnyDisease= '" + cbMemberAnyDisease.Text + "' WHERE bloodMemberId ='" + txtBloodMemberId.Text + "' ";
+            
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+            sda.SelectCommand.ExecuteNonQuery();
+            MessageBox.Show("Updated");
+
+            commandd.Connection.Close();
+        }
     }
 }

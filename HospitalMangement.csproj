@@ -147,6 +147,9 @@
     <EmbeddedResource Include="EmployeeHome.resx">
       <DependentUpon>EmployeeHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BloodMember\ViewBloodMember.resx">
+      <DependentUpon>ViewBloodMember.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>

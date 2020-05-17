@@ -61,6 +61,7 @@
             this.cbMemberAnyDisease = new System.Windows.Forms.ComboBox();
             this.cbMemberOption = new System.Windows.Forms.ComboBox();
             this.lblMemberOption = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +148,7 @@
             this.buttonUpdate.TabIndex = 141;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonView
             // 
@@ -375,11 +377,22 @@
             this.lblMemberOption.TabIndex = 149;
             this.lblMemberOption.Text = "Option";
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(894, 467);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(85, 51);
+            this.buttonBack.TabIndex = 153;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // ViewBloodMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 530);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.lblMemberAnyDisease);
             this.Controls.Add(this.cbMemberAnyDisease);
             this.Controls.Add(this.cbMemberOption);
@@ -456,5 +469,6 @@
         private System.Windows.Forms.ComboBox cbMemberAnyDisease;
         private System.Windows.Forms.ComboBox cbMemberOption;
         private System.Windows.Forms.Label lblMemberOption;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

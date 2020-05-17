@@ -57,6 +57,7 @@
             this.comboBoxOption = new System.Windows.Forms.ComboBox();
             this.textBoxSharch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -333,11 +334,22 @@
             this.label2.TabIndex = 88;
             this.label2.Text = "Details Box";
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(929, 460);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(83, 45);
+            this.buttonBack.TabIndex = 91;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // ViewDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 505);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.comboBoxOption);
             this.Controls.Add(this.textBoxSharch);
             this.Controls.Add(this.label2);
@@ -406,5 +418,6 @@
         private System.Windows.Forms.ComboBox comboBoxOption;
         private System.Windows.Forms.TextBox textBoxSharch;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

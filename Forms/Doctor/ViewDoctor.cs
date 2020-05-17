@@ -129,5 +129,12 @@ namespace HospitalMangement.Forms.Doctor
             dv.RowFilter = "" + comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
             dataGridView1.DataSource = dv;
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            DoctorHome dr = new DoctorHome();
+            dr.Show();
+            this.Close();
+        }
     }
 }
