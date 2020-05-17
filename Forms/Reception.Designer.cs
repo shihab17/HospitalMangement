@@ -167,6 +167,7 @@ namespace HospitalMangement.Forms.Reception
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(201, 32);
             this.cbDepartment.TabIndex = 16;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged_1);
             // 
             // rbPatientFemale
             // 
