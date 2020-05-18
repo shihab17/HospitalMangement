@@ -29,11 +29,18 @@ namespace HospitalMangement.Forms.Employee
             String query = "Select * FROM tblemployeeGenarelInfo ";
             SqlCommand commandd = dataaccess.GetCommand(query);
             SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-            DataTable dt = new DataTable();
-            // dt = new DataTable();
+
+            dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-            //  commandd.Connection.Close();
+
+        }
+
+        private void textBoxSharch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = "" + comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
+            dataGridView1.DataSource = dv;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -71,12 +78,7 @@ namespace HospitalMangement.Forms.Employee
             MessageBox.Show("Delete successfully!!!!");
         }
 
-        private void textBoxSharch_TextChanged(object sender, EventArgs e)
-        {
-            DataView dv = new DataView(dt);
-            dv.RowFilter = "" + comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
-            dataGridView1.DataSource = dv;
-        }
+        
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {

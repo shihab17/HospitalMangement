@@ -25,16 +25,13 @@ namespace HospitalMangement.Forms.Doctor
         private void buttonView_Click(object sender, EventArgs e)
         {
 
-            //DataAccess dataaccess = new DataAccess();
-            //String query = "Select * FROM tblDoctorGenarelInfo ";
-            //SqlCommand commandd = dataaccess.GetCommand(query);
-            //SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //dataGridView1.DataSource = dt;
+          
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pranto\Documents\hosnew.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select * FROM tblDoctorGenarelInfo ", con);
+            DataAccess dataaccess = new DataAccess();
+            String query = "Select * FROM tblDoctorGenarelInfo ";
+            SqlCommand commandd = dataaccess.GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
             dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;

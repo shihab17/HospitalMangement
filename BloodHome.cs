@@ -46,7 +46,9 @@ namespace HospitalMangement
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+            AdminHome ah = new AdminHome();
+            ah.Show();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -174,8 +176,8 @@ namespace HospitalMangement
             }
 
 
-            string sql1 = string.Format("insert into tblBloodMemberGenarelInfo (bloodMemberId,bloodMemberFirstName,bloodMemberLastName,bloodMemberFatherName,bloodMemberMotherName,bloodMemberAddress,bloodMemberEmail,bloodMemberBG,bloodMemberGender,bloodMemberBirthday,bloodMemberPhoneNumber,bloodMemberOption,bloodMemberAnyDisease,updatedTime) " +
-                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", txtBloodMemberId.Text, txtBloodMemberFirstName.Text, txtBloodMemberLastName.Text, txtBloodMemberFatherName.Text, txtBloodMemberMotherName.Text, txtBloodMemberAddress.Text, txtBloodMemberEmail.Text, cbval, checkedRB, dt,  txtBloodMemberPhoneNumber.Text, cbMemberOption.Text, cbMemberAnyDisease.Text, System.DateTime.Now.ToString());
+            string sql1 = string.Format("insert into tblBloodMemberGenarelInfo (bloodMemberId,bloodMemberFirstName,bloodMemberLastName,bloodMemberFatherName,bloodMemberMotherName,bloodMemberAddress,bloodMemberEmail,bloodMemberBG,bloodMemberGender,bloodMemberBirthday,bloodMemberPhoneNumber,bloodMemberOption,bloodMemberAnyDisease,bloodMemberUserName,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')", txtBloodMemberId.Text, txtBloodMemberFirstName.Text, txtBloodMemberLastName.Text, txtBloodMemberFatherName.Text, txtBloodMemberMotherName.Text, txtBloodMemberAddress.Text, txtBloodMemberEmail.Text, cbval, checkedRB, dt,  txtBloodMemberPhoneNumber.Text, cbMemberOption.Text, cbMemberAnyDisease.Text, txtBloodMemberUserName.Text, System.DateTime.Now.ToString());
 
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();

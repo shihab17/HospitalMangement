@@ -69,18 +69,21 @@
             // 
             this.comboBoxOption.FormattingEnabled = true;
             this.comboBoxOption.Items.AddRange(new object[] {
-            " employeeId",
-            " employeeFirstName",
-            " employeeLastName",
-            " employeeFatherName",
-            "employeeMotherName",
-            "employeeAddress",
-            " employeeEmail",
-            "employeeBG",
-            "employeeGender",
-            "employeeBirthday",
-            "employeePhoneNumber",
-            "  "});
+            "bloodMemberId",
+            "bloodMemberFirstName",
+            "bloodMemberLastName",
+            "bloodMemberFatherName",
+            "bloodMemberMotherName",
+            "bloodMemberAddress",
+            "bloodMemberEmail",
+            "bloodMemberBG",
+            "bloodMemberGender",
+            "bloodMemberBirthday",
+            "bloodMemberPhoneNumber",
+            "bloodMemberOption",
+            "bloodMemberAnyDisease",
+            "bloodMemberUserName",
+            "updatedTime"});
             this.comboBoxOption.Location = new System.Drawing.Point(429, 59);
             this.comboBoxOption.Name = "comboBoxOption";
             this.comboBoxOption.Size = new System.Drawing.Size(142, 21);
@@ -92,6 +95,7 @@
             this.textBoxSharch.Name = "textBoxSharch";
             this.textBoxSharch.Size = new System.Drawing.Size(167, 20);
             this.textBoxSharch.TabIndex = 147;
+            this.textBoxSharch.TextChanged += new System.EventHandler(this.textBoxSharch_TextChanged);
             // 
             // label2
             // 

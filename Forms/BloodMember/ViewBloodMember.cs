@@ -21,18 +21,25 @@ namespace HospitalMangement.Forms.BloodMember
         {
             InitializeComponent();
         }
-
+        DataTable dt;
         private void buttonView_Click(object sender, EventArgs e)
         {
             DataAccess dataaccess = new DataAccess();
             String query = "Select * FROM tblBloodMemberGenarelInfo ";
             SqlCommand commandd = dataaccess.GetCommand(query);
             SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-            DataTable dt = new DataTable();
-            
+
+            dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-          
+
+        }
+
+        private void textBoxSharch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = "" + comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
+            dataGridView1.DataSource = dv;
         }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -91,5 +98,7 @@ namespace HospitalMangement.Forms.BloodMember
 
             commandd.Connection.Close();
         }
+
+ 
     }
 }
