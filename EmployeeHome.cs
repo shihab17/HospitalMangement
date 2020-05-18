@@ -164,8 +164,8 @@ namespace HospitalMangement
             }
 
             
-            string sql1 = string.Format("insert into tblemployeeGenarelInfo (employeeId,employeeFirstName,employeeLastName,employeeFatherName,employeeMotherName,employeeAddress,employeeEmail,employeeBG,employeeGender,employeeBirthday,employeePhoneNumber,employeeProfessionName,updatedTime) " +
-                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", txtEmployeeId.Text, txtEmployeeFirstName.Text, txtEmployeeLastName.Text, txtEmployeeFatherName.Text, txtEmployeeMotherName.Text, txtEmployeeAddress.Text, txtEmployeeEmail.Text, cbval, checkedRB, dt, txtEmployeePhoneNumber.Text, cbEmployeeProfessionName.Text, System.DateTime.Now.ToString());
+            string sql1 = string.Format("insert into tblemployeeGenarelInfo (employeeId,employeeFirstName,employeeLastName,employeeFatherName,employeeMotherName,employeeAddress,employeeEmail,employeeBG,employeeGender,employeeBirthday,employeePhoneNumber,employeeProfessionName,employeeUserName,updatedTime) " +
+                 "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", txtEmployeeId.Text, txtEmployeeFirstName.Text, txtEmployeeLastName.Text, txtEmployeeFatherName.Text, txtEmployeeMotherName.Text, txtEmployeeAddress.Text, txtEmployeeEmail.Text, cbval, checkedRB, dt, txtEmployeePhoneNumber.Text, cbEmployeeProfessionName.Text, txtEmployeeUserName.Text, System.DateTime.Now.ToString());
 
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
@@ -188,6 +188,7 @@ namespace HospitalMangement
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+
             AdminHome ah = new AdminHome();
             ah.Show();
             this.Close();
