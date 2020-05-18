@@ -24,33 +24,30 @@ namespace HospitalMangement.Forms.Doctor
         DataTable dt;
         private void buttonView_Click(object sender, EventArgs e)
         {
-           // DataAccess dataaccess = new DataAccess();
 
-            //string sql1 = string.Format("Select * FROM tblDoctorGenarelInfo ");
-            //SqlCommand commandd = dataaccess.GetCommand(sql1);
-            //commandd.Connection.Open();
+            //DataAccess dataaccess = new DataAccess();
             //String query = "Select * FROM tblDoctorGenarelInfo ";
+            //SqlCommand commandd = dataaccess.GetCommand(query);
             //SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
-
             //DataTable dt = new DataTable();
             //sda.Fill(dt);
             //dataGridView1.DataSource = dt;
 
-            //commandd.Connection.Close();
-
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\AIUB\C#\HospitalMangement\hospital.mdf;Integrated Security=True;Connect Timeout=30");
-            // con.Open();
-            DataAccess dataaccess = new DataAccess();
-            String query = "Select * FROM tblDoctorGenarelInfo ";
-            SqlCommand commandd = dataaccess.GetCommand(query);
-            SqlDataAdapter sda = new SqlDataAdapter(query,commandd.Connection);
-            DataTable dt = new DataTable();
-           // dt = new DataTable();
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pranto\Documents\hosnew.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlDataAdapter sda = new SqlDataAdapter("Select * FROM tblDoctorGenarelInfo ", con);
+            dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-          //  commandd.Connection.Close();
-        }
 
+
+        }
+        private void textBoxSharch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = "" +comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
+            dataGridView1.DataSource = dv;
+
+        }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             DataAccess dataaccess = new DataAccess();
@@ -122,19 +119,30 @@ namespace HospitalMangement.Forms.Doctor
             MessageBox.Show("Delete successfully!!!!");
         }
 
-        private void textBoxSharch_TextChanged(object sender, EventArgs e)
-        {
-            
-            DataView dv = new DataView(dt);
-            dv.RowFilter = "" + comboBoxOption.Text + " like '%" + textBoxSharch.Text + "%'";
-            dataGridView1.DataSource = dv;
-        }
+     
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             DoctorHome dr = new DoctorHome();
             dr.Show();
             this.Close();
+        }
+
+        private void ViewDoctor_Load(object sender, EventArgs e)
+        {
+        
+                //comboBoxOption.Items.Add("doctorId");
+                //comboBoxOption.Items.Add("doctorFirstName");
+                //comboBoxOption.Items.Add("doctorLastName");
+                //comboBoxOption.Items.Add("doctorFatherName");
+                //comboBoxOption.Items.Add("doctorMotherName");
+                //comboBoxOption.Items.Add("doctorAddress");
+                //comboBoxOption.Items.Add("doctorEmail");
+                //comboBoxOption.Items.Add("doctorBG");
+                //comboBoxOption.Items.Add("doctorGender");
+                //comboBoxOption.Items.Add("doctorBirthday");
+                //comboBoxOption.Items.Add("doctorPhoneNumber");
+
         }
     }
 }

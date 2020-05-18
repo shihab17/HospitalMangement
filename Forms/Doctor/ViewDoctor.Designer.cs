@@ -299,18 +299,17 @@
             // 
             this.comboBoxOption.FormattingEnabled = true;
             this.comboBoxOption.Items.AddRange(new object[] {
-            " doctorId",
-            " doctorFirstName",
-            " doctorLastName",
-            " doctorFatherName",
+            "doctorId",
+            "doctorFirstName",
+            "doctorLastName",
+            "doctorFatherName",
             "doctorMotherName",
             "doctorAddress",
-            " doctorEmail",
+            "doctorEmail",
             "doctorBG",
             "doctorGender",
             "doctorBirthday",
-            "doctorPhoneNumber",
-            "  "});
+            "doctorPhoneNumber"});
             this.comboBoxOption.Location = new System.Drawing.Point(463, 52);
             this.comboBoxOption.Name = "comboBoxOption";
             this.comboBoxOption.Size = new System.Drawing.Size(142, 21);
@@ -381,6 +380,7 @@
             this.Controls.Add(this.lblDoctorLastName);
             this.Name = "ViewDoctor";
             this.Text = "ViewDoctor";
+            this.Load += new System.EventHandler(this.ViewDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
