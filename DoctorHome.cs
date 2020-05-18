@@ -268,7 +268,7 @@ namespace HospitalMangement
             else { MessageBox.Show("Something went wrong"); }
 
             command.Connection.Close();
-            //doctorInsertAll();
+            doctorInsertAll();
         }
        
        public void doctorInsertAll()
@@ -308,9 +308,9 @@ namespace HospitalMangement
                 }
 
             }
-            string sql1 = string.Format("insert into tblDoctor (doctorId,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,depId,updatedTime) " +
-               "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}''{12}','{13}','{14}','{15}','{16}','{17}')", txtDoctorId.Text, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbval, checkedRB, dt, txtDoctorPhoneNumber.Text, txtDoctorEdu.Text, cbIndex3, cbval1, str, cbIndex2, System.DateTime.Now.ToString());
-
+            string sql1 = string.Format("insert into tblDoctor (doctorId,doctorUsername,doctorFirstName,doctorLastName,doctorFatherName,doctorMotherName,doctorAddress,doctorEmail,doctorBG,doctorGender,doctorBirthday,doctorPhoneNumber,doctorEdu,doctorDesignation,doctorVisitTime,doctorVisitDay,depId,password,updatedTime) " +
+               "Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}')", txtDoctorId.Text,txtDoctorUserName, txtDoctorFirstName.Text, txtDoctorLastName.Text, txtDoctorFatherName.Text, txtDoctorMotherName.Text, txtDoctorAddress.Text, txtDoctorEmail.Text, cbval, checkedRB, dt, txtDoctorPhoneNumber.Text, txtDoctorEdu.Text, cbIndex3, cbIndex1, str, cbIndex2,txtDoctorPassword.Text, System.DateTime.Now.ToString());
+            ///
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
             int rowsAffected = commandd.ExecuteNonQuery();
