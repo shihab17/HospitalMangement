@@ -92,7 +92,7 @@ namespace HospitalMangement
             string pass = generator.RandomPassword();
             txtBloodMemberPassword.Text = pass;
             string sql1 = string.Format("insert into tblLogin (userName,password,updatedTime,UserType) " +
-                 "Values ('{0}','{1}','{2}','{3}')", txtBloodMemberUserName.Text, pass, System.DateTime.Now.ToString(), 7);
+                 "Values ('{0}','{1}','{2}','{3}')", txtBloodMemberUserName.Text, pass, System.DateTime.Now.ToString(), 3);
             SqlCommand commandd = dataaccess.GetCommand(sql1);
             commandd.Connection.Open();
             int rowsAffected = commandd.ExecuteNonQuery();
@@ -110,7 +110,7 @@ namespace HospitalMangement
             DataAccess dataaccess = new DataAccess();
 
             string sql = string.Format("insert into tblBloodMemberLogin (bloodMemberUserName, updatedTime,UserType) " +
-                 "Values ('{0}','{1}','{2}')", txtBloodMemberUserName.Text, System.DateTime.Now.ToString(), 7);
+                 "Values ('{0}','{1}','{2}')", txtBloodMemberUserName.Text, System.DateTime.Now.ToString(), 3);
 
             SqlCommand command = dataaccess.GetCommand(sql);
 
