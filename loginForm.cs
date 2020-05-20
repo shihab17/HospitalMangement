@@ -2,6 +2,7 @@
 using HospitalMangement.Entities;
 
 using HospitalMangement.Forms.Doctor;
+using HospitalMangement.Forms.Employee;
 using HospitalMangement.Forms.Reception;
 
 using System;
@@ -81,6 +82,18 @@ namespace HospitalMangement
                     doctor.Show();
                     this.Hide();
                 }
+                if (userType == (int)Entities.Users.UserTypeEnum.Employee)
+                {
+                    int id = Convert.ToInt32(dt.Rows[0][0].ToString());
+                    int ut = (int)Entities.Users.UserTypeEnum.Employee;
+
+                    Users usr = new Users(id, txtUserName.Text, txtPassword.Text, ut);
+
+                    EmployeeDetalis employeeDetalis = new EmployeeDetalis(this, usr);
+                    employeeDetalis.Show();
+                    this.Hide();
+                }
+
 
 
                 if (userType == (int)Entities.Users.UserTypeEnum.Reception)
