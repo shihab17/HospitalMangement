@@ -73,6 +73,7 @@ namespace HospitalMangement.Forms.Reception
             this.btnViewPatient.TabIndex = 1;
             this.btnViewPatient.Text = "View Patient";
             this.btnViewPatient.UseVisualStyleBackColor = true;
+            this.btnViewPatient.Click += new System.EventHandler(this.btnViewPatient_Click);
             // 
             // btnLogout
             // 
