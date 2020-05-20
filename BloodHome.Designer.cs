@@ -126,6 +126,7 @@
             this.txtBloodMemberPhoneNumber.Name = "txtBloodMemberPhoneNumber";
             this.txtBloodMemberPhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.txtBloodMemberPhoneNumber.TabIndex = 21;
+            this.txtBloodMemberPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBloodMemberPhoneNumber_KeyPress);
             // 
             // lblDoctorPhoneNumber
             // 

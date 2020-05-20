@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalMangement.Forms.BloodMember;
 using HospitalMangement.Forms.Management;
 
 namespace HospitalMangement
@@ -58,8 +59,8 @@ namespace HospitalMangement
 
         private void btnBloodBank_Click(object sender, EventArgs e)
         {
-            BloodHome b = new BloodHome();
-            b.Show();
+            BloodHome bpp = new BloodHome();
+            bpp.Show();
             this.Hide();
         }
     }

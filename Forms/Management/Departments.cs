@@ -40,5 +40,12 @@ namespace HospitalMangement.Forms.Management
             else { MessageBox.Show("Something went wrong"); }
             commandd.Connection.Close();
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            AdminHome ah = new AdminHome();
+            ah.Show();
+            this.Close();
+        }
     }
 }

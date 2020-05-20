@@ -189,6 +189,7 @@
             this.txtEmployeePhoneNumber.Name = "txtEmployeePhoneNumber";
             this.txtEmployeePhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.txtEmployeePhoneNumber.TabIndex = 21;
+            this.txtEmployeePhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmployeePhoneNumber_KeyPress);
             // 
             // lblDoctorPhoneNumber
             // 
@@ -394,10 +395,7 @@
             // 
             this.cblblEmployeeUserType.FormattingEnabled = true;
             this.cblblEmployeeUserType.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5"});
+            "2"});
             this.cblblEmployeeUserType.Location = new System.Drawing.Point(82, 32);
             this.cblblEmployeeUserType.Name = "cblblEmployeeUserType";
             this.cblblEmployeeUserType.Size = new System.Drawing.Size(168, 21);

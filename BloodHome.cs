@@ -3,8 +3,14 @@ using HospitalMangement.Entities;
 using HospitalMangement.Forms.BloodMember;
 using HospitalMangement.RandomNumberSample;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HospitalMangement
@@ -46,14 +52,14 @@ namespace HospitalMangement
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            AdminHome ah = new AdminHome();
-            ah.Show();
-            this.Close();
+         
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            AdminHome ah = new AdminHome();
+            ah.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -196,6 +202,15 @@ namespace HospitalMangement
             ViewBloodMember bm = new ViewBloodMember();
             bm.Show();
             this.Close();
+        }
+
+        private void txtBloodMemberPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
