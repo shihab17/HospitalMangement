@@ -119,6 +119,12 @@
     <Compile Include="Forms\Management\Management.Designer.cs">
       <DependentUpon>Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\patient\ViewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\patient\ViewPatient.Designer.cs">
+      <DependentUpon>ViewPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reception.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Management\Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\patient\ViewPatient.resx">
+      <DependentUpon>ViewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reception.resx">
+      <DependentUpon>Reception.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>

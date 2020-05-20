@@ -103,20 +103,20 @@ namespace HospitalMangement.Forms.Reception
         }
         public void refreshlab(int depId)
         {
-            //DataAccess dataaccess = new DataAccess();
-            //DataRow dr;
-            //string sql = "select * from tblLab where depId='" + depId + "'";
-            //SqlCommand command = dataaccess.GetCommand(sql);
-            //SqlDataAdapter sda = new SqlDataAdapter(command);
-            //////DataTable dt = dataaccess.Execute(command);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //dr = dt.NewRow();
-            //dr.ItemArray = new Object[] { 0, "--Select Lab Room --" };
-            //dt.Rows.InsertAt(dr, 0);
-            //cbDepartment.ValueMember = "labId";
-            //cbDepartment.DisplayMember = "labRoom";
-            //cbDepartment.DataSource = dt;
+            DataAccess dataaccess = new DataAccess();
+            DataRow dr;
+            string sql = "select * from tblLab where depId='" + depId + "'";
+            SqlCommand command = dataaccess.GetCommand(sql);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            ////DataTable dt = dataaccess.Execute(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dr = dt.NewRow();
+            dr.ItemArray = new Object[] { 0, "--Select Lab Room --" };
+            dt.Rows.InsertAt(dr, 0);
+            cbDepartment.ValueMember = "labId";
+            cbDepartment.DisplayMember = "labRoom";
+            cbDepartment.DataSource = dt;
         }
 
         private void btnViewPatient_Click(object sender, EventArgs e)
