@@ -8,6 +8,8 @@ namespace HospitalMangement.Entities
 {
      public  class Users
     {
+        internal string useremployeeId;
+
         public enum UserTypeEnum
         {
             Admin,
