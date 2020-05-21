@@ -148,6 +148,10 @@ namespace HospitalMangement.Forms.Reception
             // cbLab
             // 
             this.cbLab.FormattingEnabled = true;
+            this.cbLab.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c"});
             this.cbLab.Location = new System.Drawing.Point(403, 358);
             this.cbLab.Name = "cbLab";
             this.cbLab.Size = new System.Drawing.Size(201, 32);
