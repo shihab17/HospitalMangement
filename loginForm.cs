@@ -89,8 +89,8 @@ namespace HospitalMangement
 
                     Users usr = new Users(id, txtUserName.Text, txtPassword.Text, ut);
 
-                    EmployeeDetalis employeeDetalis = new EmployeeDetalis(this, usr);
-                    employeeDetalis.Show();
+                    Forms.Employee.Employee EmployeeDetalis = new Forms.Employee.Employee(this, usr);
+                    EmployeeDetalis.Show();
                     this.Hide();
                 }
 
