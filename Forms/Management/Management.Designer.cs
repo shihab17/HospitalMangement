@@ -35,12 +35,12 @@
             this.txtMSInsert = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAddMS = new System.Windows.Forms.Button();
+            this.panelAddService = new System.Windows.Forms.Panel();
+            this.txtServiceName = new System.Windows.Forms.TextBox();
             this.panelSelectedMS = new System.Windows.Forms.Panel();
             this.cbMS = new System.Windows.Forms.ComboBox();
             this.btnServiceGo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelAddService = new System.Windows.Forms.Panel();
-            this.txtServiceName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnServiceAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,10 +48,11 @@
             this.btnAddService = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDepartment = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panelSelectedMS.SuspendLayout();
             this.panelAddService.SuspendLayout();
+            this.panelSelectedMS.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +124,24 @@
             this.btnAddMS.UseVisualStyleBackColor = true;
             this.btnAddMS.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // panelAddService
+            // 
+            this.panelAddService.Controls.Add(this.txtServiceName);
+            this.panelAddService.Controls.Add(this.panelSelectedMS);
+            this.panelAddService.Controls.Add(this.label2);
+            this.panelAddService.Controls.Add(this.btnServiceAdd);
+            this.panelAddService.Location = new System.Drawing.Point(19, 84);
+            this.panelAddService.Name = "panelAddService";
+            this.panelAddService.Size = new System.Drawing.Size(375, 175);
+            this.panelAddService.TabIndex = 4;
+            // 
+            // txtServiceName
+            // 
+            this.txtServiceName.Location = new System.Drawing.Point(125, 43);
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.Size = new System.Drawing.Size(169, 20);
+            this.txtServiceName.TabIndex = 2;
+            // 
             // panelSelectedMS
             // 
             this.panelSelectedMS.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -161,24 +180,6 @@
             this.label3.Size = new System.Drawing.Size(107, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Medical Service";
-            // 
-            // panelAddService
-            // 
-            this.panelAddService.Controls.Add(this.txtServiceName);
-            this.panelAddService.Controls.Add(this.panelSelectedMS);
-            this.panelAddService.Controls.Add(this.label2);
-            this.panelAddService.Controls.Add(this.btnServiceAdd);
-            this.panelAddService.Location = new System.Drawing.Point(19, 84);
-            this.panelAddService.Name = "panelAddService";
-            this.panelAddService.Size = new System.Drawing.Size(375, 175);
-            this.panelAddService.TabIndex = 4;
-            // 
-            // txtServiceName
-            // 
-            this.txtServiceName.Location = new System.Drawing.Point(125, 43);
-            this.txtServiceName.Name = "txtServiceName";
-            this.txtServiceName.Size = new System.Drawing.Size(169, 20);
-            this.txtServiceName.TabIndex = 2;
             // 
             // label2
             // 
@@ -247,11 +248,22 @@
             this.btnDepartment.UseVisualStyleBackColor = true;
             this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(447, 35);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(72, 33);
+            this.buttonBack.TabIndex = 3;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // btnManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 608);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.btnDepartment);
             this.Controls.Add(this.panel1);
             this.Name = "btnManagement";
@@ -259,10 +271,10 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panelSelectedMS.ResumeLayout(false);
-            this.panelSelectedMS.PerformLayout();
             this.panelAddService.ResumeLayout(false);
             this.panelAddService.PerformLayout();
+            this.panelSelectedMS.ResumeLayout(false);
+            this.panelSelectedMS.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -292,5 +304,6 @@
         private System.Windows.Forms.Button btnAddMS;
         private System.Windows.Forms.Label lblSeviceId;
         private System.Windows.Forms.Button btnDepartment;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

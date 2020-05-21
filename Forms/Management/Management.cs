@@ -148,5 +148,12 @@ namespace HospitalMangement.Forms.Management
             d.Show();
             this.Close();
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            AdminHome ah = new AdminHome();
+            ah.Show();
+            this.Close();
+        }
     }
 }
