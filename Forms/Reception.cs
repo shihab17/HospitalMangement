@@ -22,7 +22,7 @@ namespace HospitalMangement.Forms.Reception
         public Reception(Form _previousForm, Users _user)
         {
             InitializeComponent();
-            refreshdata();
+            ///refreshdata();
             //refreshdataDoctorName();
         }
 
