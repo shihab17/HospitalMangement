@@ -100,6 +100,12 @@
     <Compile Include="Forms\Employee\EmployeeProfile.Designer.cs">
       <DependentUpon>EmployeeProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employee\employeeD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\employeeD.Designer.cs">
+      <DependentUpon>employeeD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Employee\User.cs" />
     <Compile Include="Forms\Employee\ViewEmployee.cs">
       <SubType>Form</SubType>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Employee\EmployeeProfile.resx">
       <DependentUpon>EmployeeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\employeeD.resx">
+      <DependentUpon>employeeD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Employee\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
